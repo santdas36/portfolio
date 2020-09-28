@@ -1,191 +1,205 @@
 import MagnetMouse from 'magnet-mouse';
 import { gsap } from "gsap";
-
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 // gsap.registerPlugin(ScrollTrigger);
 
+document.addEventListener("DOMContentLoaded", function (event) {
 
-document.addEventListener("DOMContentLoaded", function(event) {
+  const codeDiv = document.getElementById('projects');
+  const designDiv = document.getElementById('designs');
+  const workCode = document.getElementById('workTypeCode');
+  const workDesign = document.getElementById('workTypeDesign');
+  const workOption = [workCode, workDesign];
+  workOption.forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      let current = e.target.value;
+      if (e.target.checked && current === 'code') {
+        gsap.to(designDiv, {
+          opacity: 0,
+          y: '50px',
+          display: 'none',
+          duration: 0.3
+        });
+        gsap.to(codeDiv, {
+          opacity: 1,
+          y: 0,
+          display: 'block',
+          duration: 0.3,
+          delay: 0.3
+        });
+      } else if (e.target.checked && current === 'design') {
+        gsap.to(codeDiv, {
+          opacity: 0,
+          y: '50px',
+          display: 'none',
+          duration: 0.3
+        });
+        gsap.to(designDiv, {
+          opacity: 1,
+          y: 0,
+          display: 'flex',
+          duration: 0.3,
+          delay: 0.3
+        });
+      }
+    });
+  });
 
-const codeDiv = document.getElementById('projects');
-const designDiv = document.getElementById('designs');
-const workCode = document.getElementById('workTypeCode');
-const workDesign = document.getElementById('workTypeDesign');
-const workOption = [workCode, workDesign];
-workOption.forEach((radio) => {
-	radio.addEventListener('change', (e) => {
-		let current = e.target.value;
-		if (e.target.checked && current === 'code') {
-			gsap.to(designDiv, {opacity: 0, y: '50px', display: 'none', duration: 0.3});
-			gsap.to(codeDiv, {opacity: 1, y: 0, display: 'block', duration: 0.3, delay: 0.3});
-		} else if (e.target.checked && current === 'design') {
-			gsap.to(codeDiv, {opacity: 0, y: '50px', display: 'none', duration: 0.3});
-			gsap	.to(designDiv, {opacity: 1, y: 0, display: 'flex', duration: 0.3, delay: 0.3});
-		}
-	});
-});
+  gsap.from(".service", {
+    scrollTrigger: {
+      trigger: ".services",
+      start: "top 300"
+    },
+    duration: 0.6,
+    y: 50,
+    opacity: 0,
+    delay: 0.6,
+    stagger: 0.3,
+    ease: "power3.out",
+    clearProps: "all"
+  });
 
-gsap.from(".service", {
-  scrollTrigger: {
-    trigger: ".services",
-    start: "top 300"
-  },
-  duration: 0.6,
-  y: 50, 
-  opacity: 0, 
-  delay: 0.6, 
-  stagger: 0.3,
-  ease: "power3.out",
-  clearProps: "all"
-});
+  const projectImages = document.querySelectorAll(".project-images .small");
+  projectImages.forEach(image => {
+    gsap.from(image, {
+      scrollTrigger: {
+        trigger: image.parentElement,
+        scrub: true,
+        start: "top 90%",
+        end: "top 10%",
+      },
+      y: 80,
+      ease: "power1.inOut",
+    });
+  });
 
-const projectImages = document.querySelectorAll(".project-images .small");
-projectImages.forEach(image => {
-	gsap.from(image, {
-	  scrollTrigger: {
-	    trigger: image.parentElement,
-	    scrub: true,
-	    start: "top 90%",
-	    end: "top 10%",
-	  },
-	  y: 80, 
-	  ease: "power1.inOut",
-	});
-});
+  gsap.to('.ido1', {
+    scrollTrigger: {
+      trigger: '.ido1',
+      scrub: true,
+      start: "top bottom",
+      end: "bottom top",
+    },
+    x: '100%',
+  });
+  gsap.to('.ido2', {
+    scrollTrigger: {
+      trigger: '.ido2',
+      scrub: true,
+      start: "top bottom",
+      end: "bottom top",
+    },
+    x: '-35%',
+  });
+  gsap.to('.ido3', {
+    scrollTrigger: {
+      trigger: '.ido3',
+      scrub: true,
+      start: "top bottom",
+      end: "bottom top",
+    },
+    x: '70%',
+  });
 
-gsap.to('.ido1', {
-  scrollTrigger: {
-    trigger: '.ido1',
-    scrub: true,
-    start: "top bottom",
-    end: "bottom top",
-  },
-  x: '100%',
-});
-gsap.to('.ido2', {
-  scrollTrigger: {
-    trigger: '.ido2',
-    scrub: true,
-    start: "top bottom",
-    end: "bottom top",
-  },
-  x: '-35%',
-});
-gsap.to('.ido3', {
-  scrollTrigger: {
-    trigger: '.ido3',
-    scrub: true,
-    start: "top bottom",
-    end: "bottom top",
-  },
-  x: '70%',
-});
+  const projectImagesBig = document.querySelectorAll(".project-images .big");
+  projectImagesBig.forEach(image => {
+    gsap.from(image, {
+      scrollTrigger: {
+        trigger: image,
+        scrub: true,
+        start: "top 90%",
+        end: "top 10%",
+      },
+      y: -30,
+      ease: "power3.out",
+    });
+  });
 
-const projectImagesBig = document.querySelectorAll(".project-images .big");
-projectImagesBig.forEach(image => {
-	gsap.from(image, {
-	  scrollTrigger: {
-	    trigger: image,
-	    scrub: true,
-	    start: "top 90%",
-	    end: "top 10%",
-	  },
-	  y: -30,
-	  ease: "power3.out", 
-	});
-});
+  let navToggle = document.querySelector('.nav-toggle');
+  let mobileNav = document.querySelector('.navbar');
+  navToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+    navToggle.classList.toggle('open');
+    document.querySelector('body').classList.toggle('scrollingdisabled');
+  });
 
-let navToggle = document.querySelector('.nav-toggle');
-let mobileNav = document.querySelector('.navbar');
-navToggle.addEventListener('click', ()=> {
-	mobileNav.classList.toggle('open');
-	navToggle.classList.toggle('open');
-	document.querySelector('body').classList.toggle('scrollingdisabled');
-});
+  let stars = document.querySelectorAll('.star');
+  stars.forEach((star) => {
+    star.style.animation = `star ${(Math.floor(Math.random() * 300) / 100) + 0.5}s infinite ease-in-out`;
+  });
 
-let stars = document.querySelectorAll('.star');
-stars.forEach((star) => {
-	star.style.animation = `star ${(Math.floor(Math.random() * 300) / 100) + 0.5}s infinite ease-in-out`;
-});
+  let cursor = document.querySelector('.cursor');
+  let mm = new MagnetMouse({
+    magnet: {
+      element: '.cta',
+      class: 'cta-active',
+      position: 'center',
+      distance: 20,
+    },
+    follow: {
+      element: '.cursor',
+      class: 'cursor-active'
+    },
+    inCallback: function (data) {
+      cursor.style.width = data.elem.width;
+      cursor.style.height = data.elem.height;
+      cursor.style.opacity = 0;
+    },
+    outCallback: function (data) {
+      cursor.style.width = 2 + 'rem';
+      cursor.style.height = 2 + 'rem';
+      cursor.style.opacity = 1;
+    },
+  });
+  mm.init();
 
+  var navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor-hover');
+    });
+    navLink.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor-hover');
+    });
+  });
 
-let cursor = document.querySelector('.cursor');
-let mm = new MagnetMouse({ 
-magnet: {
-element: '.cta',
-class: 'cta-active',
-position: 'center',
-distance: 20,
-},
-follow: {
-element: '.cursor',
-class: 'cursor-active'
-},
-inCallback: function(data) {
-cursor.style.width = data.elem.width;
-cursor.style.height = data.elem.height;
-cursor.style.opacity = 0;
-},
-outCallback: function(data) {
-cursor.style.width = 2 + 'rem';
-cursor.style.height = 2 + 'rem';
-cursor.style.opacity = 1;
-},
-}); 
-mm.init();
+  var marquees = document.querySelectorAll('.about-who span');
+  marquees.forEach((marquee) => {
+    marquee.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor-scroll');
+    });
+    marquee.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor-scroll');
+    });
+  });
 
-var navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach((navLink) => {
-	navLink.addEventListener('mouseenter', () => {
-		cursor.classList.add('cursor-hover');
-	});
-	navLink.addEventListener('mouseleave', () => {
-		cursor.classList.remove('cursor-hover');
-	});
-});
+  let loaded = false;
 
-var marquees = document.querySelectorAll('.about-who span');
-marquees.forEach((marquee) => {
-	marquee.addEventListener('mouseenter', () => {
-		cursor.classList.add('cursor-scroll');
-	});
-	marquee.addEventListener('mouseleave', () => {
-		cursor.classList.remove('cursor-scroll');
-	});
-});
+  var playlist = Array("twss.mp3", "alive.mp3", "bears.mp3", "calm.mp3", "cookie.mp3", "dundies.mp3", "dwight.mp3", "fire.mp3", "goodbye.mp3", "jim.mp3", "localad.mp3", "scarn.mp3", "scranton.mp3", "theme.mp3");
 
-let loaded = false;
+  var audioElement = document.createElement('audio');
 
-var playlist = Array("twss.mp3", "alive.mp3", "bears.mp3", "calm.mp3", "cookie.mp3", "dundies.mp3", "dwight.mp3", "fire.mp3", "goodbye.mp3", "jim.mp3", "localad.mp3", "scarn.mp3", "scranton.mp3", "theme.mp3");
-
-var audioElement = document.createElement('audio');
-
-
-let playButton = document.querySelector('#playAudio');
-playButton.addEventListener('click', function() {
-	if ( !this.classList.contains('isPlaying') ) {
-		this.classList.add('isPlaying');
-		
-		let randomSong = playlist[Math.floor(Math.random()*playlist.length)];
-		if ( !this.classList.contains('notFirst') ) {
-			audioElement.setAttribute('src', "./audio/twss.mp3");
-			this.classList.add('notFirst');
-		} else {
-			audioElement.setAttribute('src', "./audio/"+randomSong);
-		}
-		audioElement.load();
-		audioElement.play();
-	} else {
-		audioElement.pause();
-		audioElement.src= '';
-		this.classList.remove('isPlaying');
-	}
-});
-audioElement.addEventListener('ended', function() {
-	loaded = false;
-	playButton.classList.remove('isPlaying');
-});
-
-
+  let playButton = document.querySelector('#playAudio');
+  playButton.addEventListener('click', function () {
+    if (!this.classList.contains('isPlaying')) {
+      this.classList.add('isPlaying');
+      let randomSong = playlist[Math.floor(Math.random() * playlist.length)];
+      if (!this.classList.contains('notFirst')) {
+        audioElement.setAttribute('src', "./audio/twss.mp3");
+        this.classList.add('notFirst');
+      } else {
+        audioElement.setAttribute('src', "./audio/" + randomSong);
+      }
+      audioElement.load();
+      audioElement.play();
+    } else {
+      audioElement.pause();
+      audioElement.src = '';
+      this.classList.remove('isPlaying');
+    }
+  });
+  audioElement.addEventListener('ended', function () {
+    loaded = false;
+    playButton.classList.remove('isPlaying');
+  });
 });
