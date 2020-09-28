@@ -1,6 +1,7 @@
-import MagnetMouse from 'magnet-mouse';
+import MagnetMouse from './magnetMouse.js';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
