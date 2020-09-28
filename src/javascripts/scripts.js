@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", (event) => {
 
   const codeDiv = document.getElementById('projects');
   const designDiv = document.getElementById('designs');
@@ -18,28 +18,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
           opacity: 0,
           y: '50px',
           display: 'none',
-          duration: 0.3
+          duration: 0.3,
         });
         gsap.to(codeDiv, {
           opacity: 1,
           y: 0,
           display: 'block',
           duration: 0.3,
-          delay: 0.3
+          delay: 0.3,
         });
       } else if (e.target.checked && current === 'design') {
         gsap.to(codeDiv, {
           opacity: 0,
           y: '50px',
           display: 'none',
-          duration: 0.3
+          duration: 0.3,
         });
         gsap.to(designDiv, {
           opacity: 1,
           y: 0,
           display: 'flex',
           duration: 0.3,
-          delay: 0.3
+          delay: 0.3,
         });
       }
     });
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   gsap.from(".service", {
     scrollTrigger: {
       trigger: ".services",
-      start: "top 300"
+      start: "top 300",
     },
     duration: 0.6,
     y: 50,
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     delay: 0.6,
     stagger: 0.3,
     ease: "power3.out",
-    clearProps: "all"
+    clearProps: "all",
   });
 
   const projectImages = document.querySelectorAll(".project-images .small");
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   const projectImagesBig = document.querySelectorAll(".project-images .big");
-  projectImagesBig.forEach(image => {
+  projectImagesBig.forEach((image) => {
     gsap.from(image, {
       scrollTrigger: {
         trigger: image,
@@ -115,21 +115,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
 
-  let navToggle = document.querySelector('.nav-toggle');
-  let mobileNav = document.querySelector('.navbar');
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.querySelector('.navbar');
   navToggle.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
     navToggle.classList.toggle('open');
     document.querySelector('body').classList.toggle('scrollingdisabled');
   });
 
-  let stars = document.querySelectorAll('.star');
+  const stars = document.querySelectorAll('.star');
   stars.forEach((star) => {
     star.style.animation = `star ${(Math.floor(Math.random() * 300) / 100) + 0.5}s infinite ease-in-out`;
   });
 
-  let cursor = document.querySelector('.cursor');
-  let mm = new MagnetMouse({
+  const cursor = document.querySelector('.cursor');
+  const mm = new MagnetMouse({
     magnet: {
       element: '.cta',
       class: 'cta-active',
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   mm.init();
 
-  var navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach((navLink) => {
     navLink.addEventListener('mouseenter', () => {
       cursor.classList.add('cursor-hover');
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
 
-  var marquees = document.querySelectorAll('.about-who span');
+  const marquees = document.querySelectorAll('.about-who span');
   marquees.forEach((marquee) => {
     marquee.addEventListener('mouseenter', () => {
       cursor.classList.add('cursor-scroll');
@@ -175,11 +175,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   let loaded = false;
 
-  var playlist = Array("twss.mp3", "alive.mp3", "bears.mp3", "calm.mp3", "cookie.mp3", "dundies.mp3", "dwight.mp3", "fire.mp3", "goodbye.mp3", "jim.mp3", "localad.mp3", "scarn.mp3", "scranton.mp3", "theme.mp3");
+  const playlist = Array("twss.mp3", "alive.mp3", "bears.mp3", "calm.mp3", "cookie.mp3", "dundies.mp3", "dwight.mp3", "fire.mp3", "goodbye.mp3", "jim.mp3", "localad.mp3", "scarn.mp3", "scranton.mp3", "theme.mp3");
 
-  var audioElement = document.createElement('audio');
+  const audioElement = document.createElement('audio');
+  const playButton = document.querySelector('#playAudio');
 
-  let playButton = document.querySelector('#playAudio');
   playButton.addEventListener('click', function () {
     if (!this.classList.contains('isPlaying')) {
       this.classList.add('isPlaying');
