@@ -1,20 +1,17 @@
 {
-  "name": "static-site-boilerplate",
-  "description": "A modern boilerplate for static website development",
-  "version": "1.1.0",
-  "homepage": "http://staticsiteboilerplate.com",
+  "name": "portfolio",
+  "description": "my personal portfolio",
+  "version": "1.0.0",
+  "homepage": "https://dashsantosh.ga",
   "author": {
-    "name": "Eric Alli",
-    "url": "http://ericalli.com"
+    "name": "DASH SANTOSH",
+    "url": "https://dashsantosh.ga"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericalli/static-site-boilerplate.git"
+    "url": "git+https://github.com/santdas36/portfolio.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ericalli/static-site-boilerplate/issues"
-  },
   "keywords": [
     "html5",
     "css3",

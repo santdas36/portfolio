@@ -9,13 +9,13 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Static Site Boilerplate',
+  site_name: 'DASH SANTOSH | Personal Portfolio | Front-End Developer, UI/UX Designer',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'A modern boilerplate for static website development',
+  site_description: 'defn. a 19yr old male who once happened to click on view source of a webpage unintentionally, and now is a Front-End Developer and UI/UX Designer',
 
   // Your website's URL, used for sitemap
-  site_url: 'http://staticsiteboilerplate.com',
+  site_url: 'https://dashsantosh.ga',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
