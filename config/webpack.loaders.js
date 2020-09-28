@@ -111,6 +111,9 @@ const imageLoader = {
     mozjpeg: {
       progressive: true,
     },
+    webp: {
+      quality: 80,
+    },
   },
 };
 
