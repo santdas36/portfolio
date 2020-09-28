@@ -1,7 +1,7 @@
 import MagnetMouse from 'magnet-mouse';
 import { gsap } from 'gsap';
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
   const codeDiv = document.getElementById('projects');
