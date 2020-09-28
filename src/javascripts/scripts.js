@@ -1,10 +1,9 @@
 import MagnetMouse from 'magnet-mouse';
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", (event) => {
-
+document.addEventListener('DOMContentLoaded', () => {
   const codeDiv = document.getElementById('projects');
   const designDiv = document.getElementById('designs');
   const workCode = document.getElementById('workTypeCode');
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const workOption = [workCode, workDesign];
   workOption.forEach((radio) => {
     radio.addEventListener('change', (e) => {
-      let current = e.target.value;
+      const current = e.target.value;
       if (e.target.checked && current === 'code') {
         gsap.to(designDiv, {
           opacity: 0,
@@ -45,31 +44,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-  gsap.from(".service", {
+  gsap.from('.service', {
     scrollTrigger: {
-      trigger: ".services",
-      start: "top 300",
+      trigger: '.services',
+      start: 'top 300',
     },
     duration: 0.6,
     y: 50,
     opacity: 0,
     delay: 0.6,
     stagger: 0.3,
-    ease: "power3.out",
-    clearProps: "all",
+    ease: 'power3.out',
+    clearProps: 'all',
   });
 
-  const projectImages = document.querySelectorAll(".project-images .small");
-  projectImages.forEach(image => {
+  const projectImages = document.querySelectorAll('.project-images .small');
+  projectImages.forEach((image) => {
     gsap.from(image, {
       scrollTrigger: {
         trigger: image.parentElement,
         scrub: true,
-        start: "top 90%",
-        end: "top 10%",
+        start: 'top 90%',
+        end: 'top 10%',
       },
       y: 80,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
     });
   });
 
@@ -77,8 +76,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       trigger: '.ido1',
       scrub: true,
-      start: "top bottom",
-      end: "bottom top",
+      start: 'top bottom',
+      end: 'bottom top',
     },
     x: '100%',
   });
@@ -86,8 +85,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       trigger: '.ido2',
       scrub: true,
-      start: "top bottom",
-      end: "bottom top",
+      start: 'top bottom',
+      end: 'bottom top',
     },
     x: '-35%',
   });
@@ -95,23 +94,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       trigger: '.ido3',
       scrub: true,
-      start: "top bottom",
-      end: "bottom top",
+      start: 'top bottom',
+      end: 'bottom top',
     },
     x: '70%',
   });
 
-  const projectImagesBig = document.querySelectorAll(".project-images .big");
+  const projectImagesBig = document.querySelectorAll('.project-images .big');
   projectImagesBig.forEach((image) => {
     gsap.from(image, {
       scrollTrigger: {
         trigger: image,
         scrub: true,
-        start: "top 90%",
-        end: "top 10%",
+        start: 'top 90%',
+        end: 'top 10%',
       },
       y: -30,
-      ease: "power3.out",
+      ease: 'power3.out',
     });
   });
 
@@ -138,16 +137,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     follow: {
       element: '.cursor',
-      class: 'cursor-active'
+      class: 'cursor-active',
     },
-    inCallback: function (data) {
+    inCallback(data) {
       cursor.style.width = data.elem.width;
       cursor.style.height = data.elem.height;
       cursor.style.opacity = 0;
     },
-    outCallback: function (data) {
-      cursor.style.width = 2 + 'rem';
-      cursor.style.height = 2 + 'rem';
+    outCallback() {
+      cursor.style.width = `${2}rem`;
+      cursor.style.height = `${2}rem`;
       cursor.style.opacity = 1;
     },
   });
@@ -173,22 +172,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-  let loaded = false;
-
-  const playlist = Array("twss.mp3", "alive.mp3", "bears.mp3", "calm.mp3", "cookie.mp3", "dundies.mp3", "dwight.mp3", "fire.mp3", "goodbye.mp3", "jim.mp3", "localad.mp3", "scarn.mp3", "scranton.mp3", "theme.mp3");
+  const playlist = ['twss.mp3', 'alive.mp3', 'bears.mp3', 'calm.mp3', 'cookie.mp3', 'dundies.mp3', 'dwight.mp3', 'fire.mp3', 'goodbye.mp3', 'jim.mp3', 'localad.mp3', 'scarn.mp3', 'scranton.mp3', 'theme.mp3'];
 
   const audioElement = document.createElement('audio');
   const playButton = document.querySelector('#playAudio');
 
-  playButton.addEventListener('click', function () {
+  playButton.addEventListener('click', () => {
     if (!this.classList.contains('isPlaying')) {
       this.classList.add('isPlaying');
-      let randomSong = playlist[Math.floor(Math.random() * playlist.length)];
+      const randomSong = playlist[Math.floor(Math.random() * playlist.length)];
       if (!this.classList.contains('notFirst')) {
-        audioElement.setAttribute('src', "./audio/twss.mp3");
+        audioElement.setAttribute('src', './audio/twss.mp3');
         this.classList.add('notFirst');
       } else {
-        audioElement.setAttribute('src', "./audio/" + randomSong);
+        audioElement.setAttribute('src', `./audio/${randomSong}`);
       }
       audioElement.load();
       audioElement.play();
@@ -198,8 +195,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       this.classList.remove('isPlaying');
     }
   });
-  audioElement.addEventListener('ended', function () {
-    loaded = false;
+  audioElement.addEventListener('ended', () => {
     playButton.classList.remove('isPlaying');
   });
 });
