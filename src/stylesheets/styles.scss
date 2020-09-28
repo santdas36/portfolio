@@ -613,6 +613,7 @@ a.lighter:hover {
 
   .navbar p {
     margin: 0;
+    line-height: 1.2;
   }
 
   .nav-social {
@@ -1168,6 +1169,19 @@ a.lighter:hover {
     flex: 0 0 calc(100% / 3 - 1rem);
     margin: 0.5rem;
     padding-bottom: calc((100% / 3 - 1rem) * 0.66125);
+  }
+}
+
+@media (max-width: 850px) {
+  .designs {
+    margin-left: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  .design {
+    flex: 0 0 calc(100% / 2 - 1.5rem);
+    margin: 0.75rem;
+    padding-bottom: calc((100% / 2 - 1.5rem) * 0.66125);
   }
 }
 
