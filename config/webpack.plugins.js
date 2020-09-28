@@ -8,7 +8,7 @@ const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
@@ -78,7 +78,7 @@ const sitemap = new SitemapPlugin(config.site_url, paths, {
 });
 
 // Favicons
-const favicons = new WebappWebpackPlugin({
+const favicons = new FaviconsWebpackPlugin({
   logo: config.favicon,
   prefix: 'images/favicons/',
   favicons: {
@@ -86,6 +86,10 @@ const favicons = new WebappWebpackPlugin({
     appDescription: config.site_description,
     developerName: null,
     developerURL: null,
+    background: '#2d93ad',
+    theme_color: '#e9efff',
+    scope: '/',
+    start_url: '/',
     icons: {
       android: true,
       appleIcon: true,
