@@ -435,6 +435,8 @@ a.lighter:hover {
 
   section#hero .container {
     padding: 3rem 3rem 6rem 3rem;
+    flex-flow: column nowrap;
+    overflow: hidden;
   }
 
   .container .hero-content {
@@ -443,11 +445,6 @@ a.lighter:hover {
 
   .container .hero-image {
     display: none;
-  }
-
-  section#hero .container {
-    flex-flow: column nowrap;
-    overflow: hidden;
   }
 
   .container .hero-content h4::after {
