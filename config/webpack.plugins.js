@@ -86,7 +86,7 @@ const favicons = new FaviconsWebpackPlugin({
     appDescription: config.site_description,
     developerName: null,
     developerURL: null,
-    background: '#2d93ad',
+    background: '#ffffff',
     theme_color: '#e9efff',
     scope: '/',
     start_url: '/',
