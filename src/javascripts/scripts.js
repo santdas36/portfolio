@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('body').classList.toggle('scrollingdisabled');
   });
 
-  const stars = document.querySelectorAll('.star');
+  const stars = document.querySelectorAll('.service-icon .star');
   stars.forEach((star) => {
     star.style.animation = `star ${(Math.floor(Math.random() * 300) / 100) + 0.5}s infinite ease-in-out`;
   });

@@ -165,7 +165,7 @@ header nav {
   justify-content: space-between;
 }
 
-header nav .logo {
+header nav #navLogo {
   height: 3rem;
   margin-left: -0.25rem;
   fill: var(--black);
@@ -360,7 +360,7 @@ a.lighter:hover {
   box-shadow: 0 0.5rem 1rem rgba(45, 147, 173, 0.2);
 }
 
-.cta .hand {
+.cta #hand {
   width: 3.25rem;
   position: absolute;
   left: -1.25rem;
@@ -406,7 +406,7 @@ a.lighter:hover {
     font-size: 1.125em;
   }
 
-  .cta .hand {
+  .cta #hand {
     width: 3rem;
   }
 
@@ -500,7 +500,7 @@ a.lighter:hover {
     padding: 0 2rem 6rem 2rem;
   }
 
-  header nav .logo {
+  header nav #navLogo {
     height: 2.5rem;
   }
 
@@ -599,7 +599,7 @@ a.lighter:hover {
     margin-left: 0.5rem;
   }
 
-  .nav-info img {
+  .nav-info svg {
     height: 3.25rem;
     width: auto;
     transform: scale(0.85);
@@ -714,7 +714,7 @@ a.lighter:hover {
   }
 }
 
-.logo,
+#navLogo,
 #ds,
 #eye1,
 #eye2 {
@@ -726,20 +726,20 @@ a.lighter:hover {
   transform-origin: center center;
 }
 
-.logo:hover {
+#navLogo:hover {
   transform: rotate(-90deg) scaleX(0.8) scaleY(1.1);
 }
 
-.logo:hover #ds {
+#navLogo:hover #ds {
   transform: scaleY(1.05) translateY(-5%);
 }
 
-.logo:hover #eye1 {
+#navLogo:hover #eye1 {
   transform: scale(1.3, 1.1) translate(11%, 5%);
   transform-origin: 50% 50%;
 }
 
-.logo:hover #eye2 {
+#navLogo:hover #eye2 {
   transform: scale(1.3, 1.1) translate(-11%, 5%);
   transform-origin: 50% 50%;
 }
@@ -892,7 +892,7 @@ a.lighter:hover {
   line-height: 1.33;
 }
 
-.star {
+.service-icon .star {
   transform-origin: center;
   transform-box: fill-box;
   stroke-width: 2px;
