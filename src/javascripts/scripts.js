@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.from('.service', {
     scrollTrigger: {
       trigger: '.services',
-      start: 'top 300',
+      start: 'center bottom',
     },
     duration: 0.6,
     y: 50,
@@ -65,11 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: {
         trigger: image.parentElement,
         scrub: true,
-        start: 'top 90%',
+        start: 'top bottom',
         end: 'top 10%',
       },
       y: 80,
       ease: 'power1.inOut',
+    });
+  });
+  
+  const projectImagesBig = document.querySelectorAll('.project-images .big');
+  projectImagesBig.forEach((image) => {
+    gsap.from(image, {
+      scrollTrigger: {
+        trigger: image,
+        scrub: true,
+        start: 'top bottom',
+        end: 'top 10%',
+      },
+      y: -30,
+      ease: 'power3.out',
     });
   });
 
@@ -99,20 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
       end: 'bottom top',
     },
     x: '70%',
-  });
-
-  const projectImagesBig = document.querySelectorAll('.project-images .big');
-  projectImagesBig.forEach((image) => {
-    gsap.from(image, {
-      scrollTrigger: {
-        trigger: image,
-        scrub: true,
-        start: 'top 90%',
-        end: 'top 10%',
-      },
-      y: -30,
-      ease: 'power3.out',
-    });
   });
 
   const navToggle = document.querySelector('.nav-toggle');
