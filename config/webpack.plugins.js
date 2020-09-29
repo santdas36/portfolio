@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -44,6 +45,9 @@ const robots = new RobotstxtPlugin({
 
 // Clean webpack
 const clean = new CleanWebpackPlugin();
+
+// Svg Inline
+const svgInline = new HtmlWebpackInlineSVGPlugin();
 
 // Stylelint
 const stylelint = new StyleLintPlugin();
@@ -138,6 +142,7 @@ module.exports = [
   stylelint,
   cssExtract,
   ...generateHTMLPlugins(),
+  svgInline,
   fs.existsSync(config.favicon) && favicons,
   config.env === 'production' && optimizeCss,
   config.env === 'production' && robots,

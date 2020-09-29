@@ -1,9 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SVGInjector } from '@tanem/svg-injector';
 import MagnetMouse from './magnetMouse';
-
-SVGInjector(document.getElementsByClassName('inject-me'));
 
 gsap.registerPlugin(ScrollTrigger);
 

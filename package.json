@@ -50,6 +50,7 @@
     "file-loader": "^4.2.0",
     "glob": "^7.1.4",
     "html-loader": "^0.5.5",
+    "html-webpack-inline-svg-plugin": "^2.3.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
     "http-server": "^0.11.1",
     "image-webpack-loader": "^5.0.0",
@@ -75,7 +76,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "@tanem/svg-injector": "^8.0.70",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "enquirer": "^2.3.1",
