@@ -115,9 +115,7 @@ const imageLoader = {
       quality: 80,
     },
     svgo: {
-      plugins: [{
-        mergePaths: false,
-      }],
+      mergePaths: false,
     },
   },
 };
