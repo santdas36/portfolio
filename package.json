@@ -68,7 +68,6 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.3",
     "stylelint-webpack-plugin": "^0.10.5",
-    "svg-inline-loader": "^0.8.2",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.1",
@@ -76,6 +75,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "@tanem/svg-injector": "^8.0.70",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "enquirer": "^2.3.1",
