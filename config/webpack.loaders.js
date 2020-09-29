@@ -118,12 +118,17 @@ const imageLoader = {
 };
 
 const images = {
-  test: /\.(gif|png|jpe?g|svg|webp)$/i,
+  test: /\.(gif|png|jpe?g|webp)$/i,
   exclude: /fonts/,
   use: [
     'file-loader?name=images/[name].[hash].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
+};
+
+const svgs =  {
+  test: /\.svg$/,
+  loader: 'svg-inline-loader?classPrefix'
 };
 
 // Font loaders
@@ -162,6 +167,7 @@ module.exports = [
   sass,
   less,
   images,
+  svgs,
   fonts,
   videos,
 ];
