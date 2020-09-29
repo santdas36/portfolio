@@ -113,7 +113,8 @@ const imageLoader = {
     },
     svgo: {
       plugins: [
-        { mergePaths: false }
+        { mergePaths: false },
+        { cleanupIDs: false }
       ]
     },
     webp: {
