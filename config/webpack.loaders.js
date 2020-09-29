@@ -114,6 +114,11 @@ const imageLoader = {
     webp: {
       quality: 80,
     },
+    svgo: {
+      plugins: [{
+        mergePaths: false,
+      }],
+    },
   },
 };
 
