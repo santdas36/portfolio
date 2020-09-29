@@ -111,11 +111,13 @@ const imageLoader = {
     mozjpeg: {
       progressive: true,
     },
+    svgo: {
+      plugins: [
+        { mergePaths: false }
+      ]
+    },
     webp: {
       quality: 80,
-    },
-    svgo: {
-      mergePaths: false,
     },
   },
 };
