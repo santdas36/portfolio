@@ -1,6 +1,6 @@
 @import url("./bootstrap-reboot.css");
 @import url("../../node_modules/@fortawesome/fontawesome-free/css/all.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Work+Sans:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Work+Sans:wght@400;600;700&display=swap");
 
 :root {
   --black: #544e61;
@@ -566,7 +566,7 @@ a.lighter:hover {
     color: var(--black);
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 900;
+    font-weight: 700;
     padding: 0.5rem 1rem;
   }
 
@@ -604,7 +604,7 @@ a.lighter:hover {
     height: 3.25rem;
     width: auto;
     transform: scale(0.85);
-    fill: --var(--gray);
+    fill: var(--gray);
   }
 
   .navbar h3 {
@@ -629,6 +629,7 @@ a.lighter:hover {
     margin-top: 1rem;
     position: relative;
     z-index: 2;
+    background: var(--yellow);
   }
 
   .nav-social a + a {
