@@ -113,13 +113,15 @@ const webpackBar = new WebpackBar({
 });
 
 // Google analytics
-const CODE = (ID) => `<script async src='https://www.googletagmanager.com/gtag/js?id=${ID}'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${ID}');
-</script>`;
+const gaCode = (ID) => {
+return `<script async src='https://www.googletagmanager.com/gtag/js?id=${ID}'></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${ID}');
+                </script>`
+}
 
 class GoogleAnalyticsPlugin {
   constructor({ id }) {
@@ -131,7 +133,7 @@ class GoogleAnalyticsPlugin {
       HTMLWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
         'GoogleAnalyticsPlugin',
         (data, cb) => {
-          data.html = data.html.replace('</head>', `${CODE(this.id)}</head>`);
+          data.html = data.html.replace('</head>', `${gaCode(this.id)}</head>`);
           cb(null, data);
         },
       );
