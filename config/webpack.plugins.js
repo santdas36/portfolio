@@ -113,15 +113,13 @@ const webpackBar = new WebpackBar({
 });
 
 // Google analytics
-const CODE = `
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ID}}"></script>
+const CODE = (ID) => `<script async src='https://www.googletagmanager.com/gtag/js?id=${ID}'></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ID}}');
-</script>
-`;
+  gtag('config', '${ID}');
+</script>`;
 
 class GoogleAnalyticsPlugin {
   constructor({ id }) {
@@ -133,7 +131,7 @@ class GoogleAnalyticsPlugin {
       HTMLWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
         'GoogleAnalyticsPlugin',
         (data, cb) => {
-          data.html = data.html.replace('</head>', `${CODE.replace('{{ID}}', this.id) }</head>`);
+          data.html = data.html.replace('</head>', `${CODE(this.id)}</head>`);
           cb(null, data);
         },
       );
