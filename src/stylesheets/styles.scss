@@ -629,7 +629,7 @@ a.lighter:hover {
     margin-top: 1rem;
     position: relative;
     z-index: 2;
-    background: var(--yellow);
+    padding: 0;
   }
 
   .nav-social a + a {
@@ -640,6 +640,7 @@ a.lighter:hover {
   .nav-social a span {
     color: var(--gray);
     transition: all 0.2s;
+    padding: 0;
   }
 
   .nav-social a:hover span::before {
