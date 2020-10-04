@@ -629,7 +629,6 @@ a.lighter:hover {
     margin-top: 1rem;
     position: relative;
     z-index: 2;
-    padding: 0;
   }
 
   .nav-social a + a {
@@ -640,7 +639,6 @@ a.lighter:hover {
   .nav-social a span {
     color: var(--gray);
     transition: all 0.2s;
-    padding: 0;
   }
 
   .nav-social a:hover span::before {
@@ -658,10 +656,10 @@ a.lighter:hover {
     height: 1.5rem;
     background: var(--white);
     border-radius: 99px;
-    right: -0.25rem;
-    bottom: -0.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0.5rem, -0.5rem);
     z-index: -1;
-    transition: all 0.2s;
   }
 
   .nav-toggle {
