@@ -147,7 +147,8 @@ img {
   width: 100%;
 }
 
-.mobile {
+.mobile,
+.nav-social.mobile {
   display: none;
 }
 
@@ -208,6 +209,50 @@ li:last-of-type .nav-link {
 
 .nav-link:hover::before {
   width: 50%;
+}
+
+.nav-social {
+  display: flex;
+  align-self: center;
+}
+
+.nav-social a {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-social a + a {
+  margin-left: 1rem;
+}
+
+.nav-social a span::before,
+.nav-social a span {
+  color: var(--gray);
+  transition: all 0.2s;
+}
+
+.nav-social a:hover span::before {
+  color: var(--teal);
+}
+
+.nav-social a:hover span {
+  transform: scale(1.15);
+}
+
+.nav-social a::before {
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--white);
+  border-radius: 99px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0.5rem, -0.5rem);
+  z-index: -1;
 }
 
 section#hero {
@@ -588,6 +633,10 @@ a.lighter:hover {
     display: block;
   }
 
+  .nav-social.mobile {
+    display: flex;
+  }
+
   .nav-info {
     display: flex;
     align-items: flex-end;
@@ -616,50 +665,6 @@ a.lighter:hover {
   .navbar p {
     margin: 0;
     line-height: 1.2;
-  }
-
-  .nav-social {
-    display: flex;
-    align-self: center;
-  }
-
-  .nav-social a {
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .nav-social a + a {
-    margin-left: 1rem;
-  }
-
-  .nav-social a span::before,
-  .nav-social a span {
-    color: var(--gray);
-    transition: all 0.2s;
-  }
-
-  .nav-social a:hover span::before {
-    color: var(--teal);
-  }
-
-  .nav-social a:hover span {
-    transform: scale(1.15);
-  }
-
-  .nav-social a::before {
-    position: absolute;
-    content: '';
-    width: 1.5rem;
-    height: 1.5rem;
-    background: var(--white);
-    border-radius: 99px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-0.5rem, -0.5rem);
-    z-index: -1;
   }
 
   .nav-toggle {
