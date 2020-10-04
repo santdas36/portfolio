@@ -113,7 +113,7 @@ h2,
 h3,
 h4,
 h5,
-h5 {
+h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -1346,7 +1346,8 @@ a.lighter:hover {
     transform: translate(10%, -10%);
   }
 
-  80% {transform: translate(0, 10%);
+  80% {
+    transform: translate(0, 10%);
   }
 }
 
@@ -1400,8 +1401,8 @@ a.lighter:hover {
   border-radius: 0.5rem;
   resize: none;
   transition: all 0.2s;
-  font-family: "Montserrat";
-  font-weight: 500
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .form-input .button {
@@ -1439,7 +1440,7 @@ a.lighter:hover {
   box-shadow: 0 0 0 1.5px var(--teal), 0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
 }
 
-.form-input .inputElem.active+label {
+.form-input .inputElem.active + label {
   top: -0.425rem;
   left: 1rem;
   font-size: 0.85rem;
@@ -1515,7 +1516,7 @@ footer .container {
   }
 
   .backToTop {
-    transform: scale(0.75)
+    transform: scale(0.75);
   }
 
   .copyright {
