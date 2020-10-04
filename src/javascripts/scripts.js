@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.from('.service', {
     scrollTrigger: {
       trigger: '.services',
-      start: 'center bottom',
+      start: 'top bottom',
     },
     duration: 0.6,
     y: 50,
