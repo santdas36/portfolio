@@ -128,6 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     star.style.animation = `star ${(Math.floor(Math.random() * 300) / 100) + 0.5}s infinite ease-in-out`;
   });
 
+  const cElem = document.querySelectorAll('.contact-elem');
+  cElem.forEach((elem) => {
+    elem.style.animation = `cElem ${(Math.floor(Math.random() * 300) / 100) + 3}s infinite ease-in-out`;
+  });
+
   const cursor = document.querySelector('.cursor');
   const mm = new MagnetMouse({
     magnet: {
@@ -198,5 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   audioElement.addEventListener('ended', () => {
     playButton.classList.remove('isPlaying');
+  });
+
+  const inputElems = document.querySelectorAll('.inputElem');
+  inputElems.forEach((elem) => {
+    elem.addEventListener('focus', (e) => {
+      if (!e.target.classList.contains('active')) {
+        e.target.classList.add('active');
+      }
+    });
+    elem.addEventListener('blur', (e) => {
+      if (!e.target.value) {
+        e.target.classList.remove('active');
+      }
+    });
   });
 });

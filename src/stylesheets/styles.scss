@@ -111,7 +111,9 @@ transform-origin: 0% 0%;
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -123,6 +125,7 @@ h4 {
   color: var(--teal);
   z-index: 2;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .heading::before {
@@ -624,7 +627,7 @@ a.lighter:hover {
   .navbar::before {
     z-index: 99;
     background: var(--teal);
-    box-shadow: inset 0 2.5rem 1rem -1.5rem rgba(0, 0, 0, 0.2), 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2.5rem 1rem -1.5rem rgba(0, 0, 0, 0.2), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition-timing-function: cubic-bezier(0.05, 0.18, 0.14, 0.98);
   }
 
@@ -1323,4 +1326,201 @@ a.lighter:hover {
 #contact {
   background: var(--white);
   box-shadow: 0 -1rem 2rem -1.5rem rgba(0, 0, 0, 0.15), 0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.15);
+}
+
+@keyframes cElem {
+  0,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(10%, 10%);
+  }
+
+  40% {
+    transform: translate(-10%, 0);
+  }
+
+  60% {
+    transform: translate(10%, -10%);
+  }
+
+  80% {transform: translate(0, 10%);
+  }
+}
+
+.contact-elem {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.contact-inner {
+  display: flex;
+}
+
+.contact-info {
+  flex: 0 0 60%;
+}
+
+.contact-inner svg {
+  width: 80%;
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 40%;
+}
+
+.form-input {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.form-input label {
+  position: absolute;
+  left: 1rem;
+  top: 1.15rem;
+  color: var(--gray);
+  transition: all 0.2s;
+  background: transparent;
+  line-height: 1;
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+
+.form-input .inputElem {
+  box-shadow: 0 0 0 1.5px var(--teal);
+  line-height: 1;
+  border: none;
+  background: var(--white);
+  padding: 1.15rem 1rem 0.85rem 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  resize: none;
+  transition: all 0.2s;
+  font-family: "Montserrat";
+  font-weight: 500
+}
+
+.form-input .button {
+  padding: 0.75rem 1.5rem !important;
+}
+
+.form-input textarea.inputElem {
+  height: 8rem;
+  padding: 0;
+  border: 1rem solid transparent;
+  line-height: 1.5;
+}
+
+.form-input textarea.inputElem::-webkit-scrollbar {
+  width: 1.5px;
+  background: transparent;
+}
+
+.form-input textarea.inputElem::-webkit-scrollbar-thumb {
+  background: var(--teal);
+  border-radius: 3px;
+}
+
+.form-input.button .button {
+  text-transform: inherit;
+  font-weight: 500;
+}
+
+.form-input .inputElem:hover:not(.active) {
+  background: rgba(45, 147, 173, 0.05);
+}
+
+.form-input .inputElem:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.5px var(--teal), 0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
+}
+
+.form-input .inputElem.active+label {
+  top: -0.425rem;
+  left: 1rem;
+  font-size: 0.85rem;
+  background: var(--white);
+  color: var(--teal);
+}
+
+footer {
+  color: var(--gray);
+  position: relative;
+}
+
+footer .container {
+  display: flex;
+}
+
+.backToTop {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background: var(--lightblue);
+  border-radius: 99px;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  top: -2rem;
+  left: calc(50% - 2rem);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  transform: scale(0.85);
+}
+
+.backToTop:hover {
+  background: var(--gray);
+  color: var(--lightblue);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+}
+
+.copyright {
+  text-align: right;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+@media (max-width: 550px) {
+  .contact-inner {
+    flex-flow: column nowrap;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 100%;
+  }
+
+  .contact-info svg {
+    width: 100%;
+  }
+
+  .form-input.buttons {
+    margin: 1rem auto;
+  }
+
+  .form-input .button {
+    text-transform: uppercase;
+  }
+
+  footer .container,
+  .footer-inner {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .backToTop {
+    transform: scale(0.75)
+  }
+
+  .copyright {
+    margin: 0;
+    margin-top: 2rem;
+    text-align: center;
+  }
 }

@@ -171,12 +171,13 @@ sup {
 }
 
 a {
-  color: #eee;
+  color: #92aabf;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
-  color: #fff;
+  color: #2d93ad;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
