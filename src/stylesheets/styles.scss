@@ -1064,6 +1064,8 @@ a.lighter:hover {
   flex: 0 0 auto;
   width: 60%;
   position: relative;
+  height: 0;
+  padding-bottom: calc(60% * 0.5859375);
 }
 
 .project-images img {
@@ -1071,10 +1073,13 @@ a.lighter:hover {
   overflow: hidden;
   border: 0.5rem solid var(--teal);
   box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(45, 147, 173, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-images .small {
-  position: absolute;
   width: 35%;
   left: 15%;
   top: 20%;
@@ -1246,6 +1251,10 @@ a.lighter:hover {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .project-images {
+    padding-bottom: calc(100% * 0.5859375);
   }
 
   .project-images img {
