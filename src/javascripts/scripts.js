@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.classList.toggle('open');
     document.querySelector('body').classList.toggle('scrollingdisabled');
   });
-  anchorLinks.forEach(link => {
+  anchorLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-      let linkTo = e.target.getAttribute('href').split('#')[1];
+      const linkTo = e.target.getAttribute('href').split('#')[1];
       if (linkTo) {
         e.preventDefault();
         if (mobileNav.classList.contains('open')) {
