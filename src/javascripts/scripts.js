@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   anchorLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-      const linkTo = e.target.getAttribute('href').split('#')[1];
+      const linkTo = link.getAttribute('href').split('#')[1];
       if (linkTo) {
         e.preventDefault();
         if (mobileNav.classList.contains('open')) {
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
           document.querySelector('body').classList.remove('scrollingdisabled');
           setTimeout(() => {
             document.getElementById(linkTo).scrollIntoView();
-          }, 500);
+          }, 200);
         } else {
           document.getElementById(linkTo).scrollIntoView();
         }
