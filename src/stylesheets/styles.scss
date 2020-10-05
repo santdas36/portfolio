@@ -1473,10 +1473,19 @@ footer .container {
   transform: scale(0.85);
 }
 
+.backToTop::before {
+  color: var(--gray);
+  transition: color 0.2s;
+}
+
 .backToTop:hover {
   background: var(--gray);
-  color: var(--lightblue);
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+  top: -1.75rem;
+}
+
+.backToTop:hover::before {
+  color: var(--lightblue);
 }
 
 .copyright {
