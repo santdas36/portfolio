@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.from('.service', {
     scrollTrigger: {
       trigger: '.services',
-      start: 'top bottom',
+      start: '50 bottom',
     },
     duration: 0.6,
     y: 50,
@@ -127,10 +127,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navToggle = document.querySelector('.nav-toggle');
   const mobileNav = document.querySelector('.navbar');
+  const anchorLinks = document.querySelectorAll('a');
   navToggle.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
     navToggle.classList.toggle('open');
     document.querySelector('body').classList.toggle('scrollingdisabled');
+  });
+  anchorLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      let linkTo = e.target.getAttribute('href').split('#')[1];
+      if (linkTo) {
+        e.preventDefault();
+        if (mobileNav.classList.contains('open')) {
+          mobileNav.classList.remove('open');
+          navToggle.classList.remove('open');
+          document.querySelector('body').classList.remove('scrollingdisabled');
+          setTimeout(() => {
+            document.getElementById(linkTo).scrollIntoView();
+          }, 500);
+        } else {
+          document.getElementById(linkTo).scrollIntoView();
+        }
+      }
+    });
   });
 
   const stars = document.querySelectorAll('.service-icon .star');
