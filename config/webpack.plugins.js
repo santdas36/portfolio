@@ -87,7 +87,7 @@ const favicons = new FaviconsWebpackPlugin({
   logo: config.favicon,
   prefix: 'images/favicons/',
   favicons: {
-    appName: config.site_name,
+    appName: 'Dash Santosh',
     appDescription: config.site_description,
     developerName: null,
     developerURL: null,
