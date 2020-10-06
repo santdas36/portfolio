@@ -1215,6 +1215,7 @@ a.lighter:hover {
   border: 0.25rem solid var(--white);
   box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(45, 147, 173, 0.5);
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .design:hover {
@@ -1245,6 +1246,7 @@ a.lighter:hover {
   background: var(--teal);
   mix-blend-mode: overlay;
   transition: opacity 0.2s;
+  pointer-events: none;
 }
 
 .design:hover::before {
