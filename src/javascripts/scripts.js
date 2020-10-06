@@ -241,12 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   designImages.forEach((image) => {
     image.addEventListener('click', (e) => {
-      imgUrl = e.target.getAttribute('src');
+      const imgUrl = e.target.getAttribute('src');
       imgModalImage.setAttribute('src', imgUrl);
       gsap.to(imgModal, {
         opacity: 1,
         display: 'grid',
-       });
+      });
       gsap.from(imgModalInner, {
         y: 50,
         scale: 0.95,
