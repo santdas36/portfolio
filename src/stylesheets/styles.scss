@@ -61,6 +61,85 @@ body.scrollingDisabled {
   border-color: var(--yellow);
 }
 
+.image-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  place-items: center;
+}
+
+.image-modal-inner {
+  width: calc(100% - 6rem);
+  height: 0;
+  margin: 3rem;
+  padding-bottom: calc((100% - 6rem) * 0.66125);
+  position: relative;
+  background: #222;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 2rem -0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.image-modal-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-close {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 3rem;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 0.5rem 0.5rem rgba(45, 147, 173, 0.15);
+  padding: 0.33rem 0.66rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1150px) {
+  .image-modal-inner {
+    width: 1024px;
+    margin: 0;
+    padding-bottom: 678px;
+  }
+}
+
+@media (max-width: 550px) {
+  .image-modal {
+    display: none !important;
+  }
+}
+
+.view-more {
+  display: flex;
+}
+
+.designs .view-more {
+  margin: 3rem auto 0 auto;
+}
+
+.view-more .button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-more .button span {
+  margin-right: 0.5rem;
+}
+
 /* .preload {
 width: 100vw;
 height: 100vh;
@@ -1196,6 +1275,10 @@ a.lighter:hover {
     margin: 0.75rem;
     padding-bottom: calc((100% / 2 - 1.5rem) * 0.66125);
   }
+
+  .design:last-of-type {
+    display: none;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1288,6 +1371,7 @@ a.lighter:hover {
   text-transform: uppercase;
   white-space: nowrap;
   background: var(--black);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.1);
 }
 
 .buttons .button:disabled {
@@ -1296,6 +1380,7 @@ a.lighter:hover {
 
 .button:hover {
   filter: brightness(110%);
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0, 0.25);
 }
 
 .button:focus {
@@ -1326,6 +1411,7 @@ a.lighter:hover {
   background: transparent;
   color: var(--teal);
   padding: 0.5rem;
+  box-shadow: none !important;
 }
 
 #contact {
@@ -1363,20 +1449,47 @@ a.lighter:hover {
 
 .contact-inner {
   display: flex;
+  align-items: flex-end;
 }
 
 .contact-info {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
+  padding: 3rem;
+  padding-top: 0;
+}
+
+.contact-info-inner {
+  margin-top: 2rem;
+}
+
+.contact-info-inner h5 {
+  margin-bottom: 1rem;
+}
+
+.contact-info-inner h3 {
+  font-weight: 300;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.15;
 }
 
 .contact-inner svg {
-  width: 80%;
+  width: 100%;
+  max-width: 360px;
 }
 
 .contact-form {
   display: flex;
   flex-flow: column nowrap;
-  flex: 0 0 40%;
+  flex: 0 0 50%;
+  padding: 3rem;
+  padding-top: 0;
+}
+
+@media (max-width: 850px) {
+  .contact-form,
+  .contact-info {
+    padding: 1.5rem;
+  }
 }
 
 .form-input {
@@ -1507,10 +1620,12 @@ footer .container {
   .contact-info,
   .contact-form {
     flex: 100%;
+    padding: 0;
+    width: 100%;
   }
 
-  .contact-info svg {
-    width: 100%;
+  .contact-form {
+    margin-top: 3rem;
   }
 
   .form-input.buttons {
