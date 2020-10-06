@@ -234,6 +234,36 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.classList.remove('isPlaying');
   });
 
+  const designImages = document.querySelectorAll('.design img');
+  const imgModal = document.querySelector('.image-modal');
+  const imgModalInner = document.querySelector('.image-modal-inner');
+  const imgModalImage = document.querySelector('.image-modal-inner img');
+
+  designImages.forEach((image) => {
+    image.addEventListener('click', (e) => {
+      imgUrl = e.target.getAttribute('src');
+      imgModalImage.setAttribute('src', imgUrl);
+      gsap.to(imgModal, {
+        opacity: 1,
+        display: 'grid',
+       });
+      gsap.from(imgModalInner, {
+        y: 50,
+        scale: 0.95,
+      });
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInside = imgModalInner.contains(event.target);
+    if (!isClickInside && imgModal.style.display !== 'none') {
+      gsap.to(imgModal, {
+        opacity: 0,
+        display: 'none',
+      });
+    }
+  });
+
   const inputElems = document.querySelectorAll('.inputElem');
   inputElems.forEach((elem) => {
     elem.addEventListener('focus', (e) => {
