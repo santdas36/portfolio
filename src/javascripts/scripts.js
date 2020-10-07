@@ -264,17 +264,69 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const contactForm = document.querySelector('.contact-form');
+  const submitUrl = contactForm.getAttribute('action');
   const inputElems = document.querySelectorAll('.inputElem');
+  const emailRE = /^\S+@\S+\.\S+$/;
+
   inputElems.forEach((elem) => {
     elem.addEventListener('focus', (e) => {
       if (!e.target.classList.contains('active')) {
         e.target.classList.add('active');
       }
+      e.target.parentNode.classList.remove('error');
     });
     elem.addEventListener('blur', (e) => {
       if (!e.target.value) {
         e.target.classList.remove('active');
+        e.target.parentNode.classList.add('error');
+      } else if (e.target.getAttribute('name') === 'email' && !emailRE.test(e.target.value)) {
+        e.target.parentNode.classList.add('error');
+      } else if (e.target.getAttribute('name') === 'message' && e.target.value.length < 10) {
+        e.target.parentNode.classList.add('error');
       }
     });
+  });
+  const inpName = document.getElementById("name");
+  const inpEmail = document.getElementById("email");
+  const inpMessage = document.getElementById("message");
+  const inpSubmit = document.getElementById("submitForm");
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!inpName.value) {
+      inpName.parentNode.classList.add('error');
+      inpName.focus();
+    } else if (!inpEmail.value || !emailRE.test(inpEmail.value)) {
+      inpEmail.parentNode.classList.add('error');
+      inpEmail.focus();
+    } else if (!inpMessage.value || inpMessage.value.length < 10) {
+      inpMessage.parentNode.classList.add('error');
+      inpMessage.focus();
+    } else {
+      inpSubmit.innerHTML = '<img src="loading.svg" class="sending"/> Sending...';
+      fetch('https://getform.io/f/af6c6fc5-8782-4368-a61c-bb5bcf811344', {
+        method: 'POST',
+        body: new FormData(contactForm),
+      }).then(() => {
+        inpSubmit.innerHTML = '<img src="success.svg" class="sent"/> Message Sent!';
+        gsap.to(contactForm, {
+          opacity: 0,
+          delay: 1
+        });
+        setTimeout(() => {
+          inpSubmit.innerHTML = 'Send Message';
+          inpName.value = '';
+          inpEmail.value = '';
+          inpMessage.value = '';
+          inpName.classList.remove('active');
+          inpEmail.classList.remove('active');
+          inpMessage.classList.remove('active');
+          gsap.to(contactForm, {
+            opacity: 1,
+            delay: 0.5
+          });
+        }, 1500);
+      });
+    }
   });
 });

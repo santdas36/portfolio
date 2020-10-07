@@ -1568,6 +1568,42 @@ a.lighter:hover {
   color: var(--teal);
 }
 
+.form-input .error {
+  color: crimson;
+  font-size: 0.85rem;
+  margin: 0;
+  position: absolute;
+  bottom: -1rem;
+  left: 1rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-input.error .error {
+  opacity: 1;
+}
+
+.form-input.error .inputElem {
+  box-shadow: 0 0 0 1.5px crimson;
+  color: crimson;
+  margin-bottom: 0.5rem;
+}
+
+.form-input.error label {
+  color: crimson !important;
+}
+
+#submitForm img {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#submitForm img.sent {
+  width: 1rem;
+  height: 1rem;
+}
+
 footer {
   color: var(--gray);
   position: relative;
