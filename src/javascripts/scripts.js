@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  const inpName = document.getElementById('name]);
+  const inpName = document.getElementById('name');
   const inpEmail = document.getElementById('email');
   const inpMessage = document.getElementById('message');
   const inpSubmit = document.getElementById('submitForm');
