@@ -265,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const contactForm = document.querySelector('.contact-form');
-  const submitUrl = contactForm.getAttribute('action');
   const inputElems = document.querySelectorAll('.inputElem');
   const emailRE = /^\S+@\S+\.\S+$/;
 
@@ -287,10 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  const inpName = document.getElementById("name");
-  const inpEmail = document.getElementById("email");
-  const inpMessage = document.getElementById("message");
-  const inpSubmit = document.getElementById("submitForm");
+  const inpName = document.getElementById('name]);
+  const inpEmail = document.getElementById('email');
+  const inpMessage = document.getElementById('message');
+  const inpSubmit = document.getElementById('submitForm');
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!inpName.value) {
@@ -311,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inpSubmit.innerHTML = '<img src="../images/success.svg" class="sent"/> Message Sent!';
         gsap.to(contactForm, {
           opacity: 0,
-          delay: 1
+          delay: 1,
         });
         setTimeout(() => {
           inpSubmit.innerHTML = 'Send Message';
@@ -323,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
           inpMessage.classList.remove('active');
           gsap.to(contactForm, {
             opacity: 1,
-            delay: 0.5
+            delay: 0.5,
           });
         }, 1500);
       });
