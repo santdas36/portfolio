@@ -40,7 +40,7 @@ body.scrollingDisabled {
   height: 2rem;
   border: 1.5px solid var(--yellow);
   border-radius: 10rem;
-  transition: transform 0.3s ease-in, width 0.15s 0.15s, height 0.15s 0.15s, opacity 0.15s 0.15s;
+  transition: width 0.15s 0.15s, height 0.15s 0.15s, opacity 0.15s 0.15s;
   z-index: 99999999;
   pointer-events: none;
   transform: translate(-100%, -100%);
