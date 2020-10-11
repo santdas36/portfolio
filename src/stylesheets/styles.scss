@@ -40,7 +40,7 @@ body.scrollingDisabled {
   height: 2rem;
   border: 1.5px solid var(--yellow);
   border-radius: 10rem;
-  transition: width 0.1s, height 0.1s, opacity 0.1s, background 0.1s, border-color 0.1s;
+  transition: width 0.1s, height 0.1s, opacity 0.1s, background 0.1s;
   z-index: 99999999;
   pointer-events: none;
   transform: translate(-100%, -100%);
@@ -50,7 +50,6 @@ body.scrollingDisabled {
   width: 4rem !important;
   height: 4rem !important;
   background: var(--yellow);
-  border-color: var(--yellow);
   z-index: 0;
 }
 
@@ -58,7 +57,6 @@ body.scrollingDisabled {
   width: 10rem !important;
   height: 10rem !important;
   background: var(--yellow);
-  border-color: var(--yellow);
   z-index: 0;
 }
 
