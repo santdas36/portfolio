@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import MagnetMouse from './magnetMouse';
-import succesIcon from '../images/success.svg';
+import successIcon from '../images/success.svg';
 import loadingIcon from '../images/loading.svg';
 
 gsap.registerPlugin(ScrollTrigger);
