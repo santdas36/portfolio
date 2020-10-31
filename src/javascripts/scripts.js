@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import MagnetMouse from './magnetMouse';
+import succesIcon from '../images/success.svg';
+import loadingIcon from '../images/loading.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -302,12 +304,12 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.parentNode.classList.add('error');
       inpMessage.focus();
     } else {
-      inpSubmit.innerHTML = `<img src=${require('../images/loading.svg')} class="sending"/> Sending...`;
+      inpSubmit.innerHTML = `<img src=${loadingIcon} class="sending"/> Sending...`;
       fetch('https://getform.io/f/af6c6fc5-8782-4368-a61c-bb5bcf811344', {
         method: 'POST',
         body: new FormData(contactForm),
       }).then(() => {
-        inpSubmit.innerHTML = `<img src=${require('../images/success.svg')} class="sent"/> Message Sent!`;
+        inpSubmit.innerHTML = `<img src=${successIcon} class="sent"/> Message Sent!`;
         gsap.to(contactForm, {
           opacity: 0,
           delay: 1,
