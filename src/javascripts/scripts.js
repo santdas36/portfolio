@@ -302,12 +302,12 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.parentNode.classList.add('error');
       inpMessage.focus();
     } else {
-      inpSubmit.innerHTML = `<img src=${require(../images/loading.svg)} class="sending"/> Sending...`;
+      inpSubmit.innerHTML = `<img src=${require('../images/loading.svg')} class="sending"/> Sending...`;
       fetch('https://getform.io/f/af6c6fc5-8782-4368-a61c-bb5bcf811344', {
         method: 'POST',
         body: new FormData(contactForm),
       }).then(() => {
-        inpSubmit.innerHTML = `<img src=${require(../images/success.svg)} class="sent"/> Message Sent!`;
+        inpSubmit.innerHTML = `<img src=${require('../images/success.svg')} class="sent"/> Message Sent!`;
         gsap.to(contactForm, {
           opacity: 0,
           delay: 1,
