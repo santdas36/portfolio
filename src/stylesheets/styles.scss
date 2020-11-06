@@ -434,8 +434,7 @@ h1.hero-title {
 
 .hero-form .email:focus {
   outline: none;
-  box-shadow: inset 0 0 0 1.5px var(--teal),
-    0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
+  box-shadow: inset 0 0 0 1.5px var(--teal), 0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
 }
 
 .email::placeholder {
