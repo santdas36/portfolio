@@ -390,6 +390,7 @@ img.avatar-bg {
 
 .about-who .hero-content {
   margin: auto 3rem 1rem 3rem;
+  width: calc(65% - 6rem);
 }
 
 .hero-content h4 {
@@ -560,6 +561,7 @@ a.lighter:hover {
 
   .about-who .hero-content {
     margin: auto 0 1rem 3rem;
+    width: calc(65% - 3rem);
   }
 }
 
@@ -583,9 +585,10 @@ a.lighter:hover {
     width: 80%;
   }
 
-  .hero-content {
+  .about-who .hero-content {
     margin: 0;
     margin-top: 3rem;
+    width: 100%;
   }
 
   .hero-content .title {
