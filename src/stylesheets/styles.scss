@@ -373,7 +373,7 @@ section#hero {
 
 .about-who .hero-image {
   width: 35%;
-  max-width: 20rem;
+  max-width: 300px;
   position: relative;
   z-index: 2;
 }
@@ -390,7 +390,7 @@ img.avatar-bg {
 
 .about-who .hero-content {
   margin: auto 3rem 1rem 3rem;
-  width: calc(65% - 6rem);
+  width: fit-content;
 }
 
 .hero-content h4 {
@@ -472,7 +472,7 @@ img.avatar-bg {
 
 .description {
   margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 550px;
   font-size: 1rem;
 }
 
