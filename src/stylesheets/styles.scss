@@ -947,15 +947,13 @@ a.lighter:hover {
   }
 }
 
-@media (max-width: 850px) {
-  .about-who {
-    flex-flow: column nowrap;
-  }
-}
-
 @media (max-width: 550px) {
   .quote {
     padding: 1.25rem;
+  }
+
+  .about-who {
+    flex-flow: column nowrap;
   }
 
   .about-quote > h4 {
