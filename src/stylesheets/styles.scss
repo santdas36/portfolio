@@ -397,7 +397,6 @@ img.avatar-bg {
   color: var(--gray);
   opacity: 0.5;
   margin-bottom: 0;
-  margin-left: -0.05rem;
   position: relative;
   display: inline;
 }
@@ -491,7 +490,7 @@ a.lighter:hover {
 .cta {
   background: var(--lightblue);
   padding: 0.75rem 2rem 0.75rem 3.25rem;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   border-radius: 5rem;
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -561,10 +560,6 @@ a.lighter:hover {
   .about-who .hero-content {
     margin: auto 0 1rem 3rem;
   }
-
-  .hero-content h4 {
-    margin-left: -0.05rem;
-  }
 }
 
 @media (max-width: 850px) {
@@ -575,44 +570,20 @@ a.lighter:hover {
   header .container {
     padding: 3rem;
   }
-
-  .about-who .hero-content {
-    margin: 0;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .hero-content h4::after {
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    background: var(--white);
-    top: 75%;
-    left: calc(100% + 1rem);
-  }
 }
 
 @media (max-width: 550px) {
   .container .hero-image {
     display: block;
-    width: 100%;
+    width: 80%;
   }
 
   .hero-content {
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
 
   .hero-content .title {
-    margin-left: -0.1rem;
     line-height: 1;
-  }
-
-  .hero-content h4 {
-    margin-left: -0.05rem;
-    line-height: 2;
   }
 
   .cta {
@@ -970,7 +941,6 @@ a.lighter:hover {
 @media (max-width: 850px) {
   .about-who {
     flex-flow: column nowrap;
-    overflow: hidden;
   }
 }
 
