@@ -952,10 +952,6 @@ a.lighter:hover {
     padding: 1.25rem;
   }
 
-  .about-who {
-    flex-flow: column nowrap;
-  }
-
   .about-quote > h4 {
     margin: 1rem 0 3rem 0;
   }
@@ -997,6 +993,7 @@ a.lighter:hover {
 
   .about-who {
     margin-bottom: 5rem;
+    flex-flow: column nowrap;
   }
 }
 
