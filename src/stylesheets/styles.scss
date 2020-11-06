@@ -372,7 +372,7 @@ section#hero {
 }
 
 .about-who .hero-image {
-  flex: 0 0 35%;
+  width: 35%;
   max-width: 20rem;
   position: relative;
   z-index: 2;
@@ -491,7 +491,7 @@ a.lighter:hover {
 .cta {
   background: var(--lightblue);
   padding: 0.75rem 2rem 0.75rem 3.25rem;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   border-radius: 5rem;
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -551,7 +551,7 @@ a.lighter:hover {
 
   .cta {
     padding: 0.66rem 1.5rem 0.66rem 2.75rem;
-    font-size: 1.125rem;
+    font-size: 1.05rem;
   }
 
   .cta #hand {
@@ -580,6 +580,7 @@ a.lighter:hover {
   }
 
   .hero-content {
+    margin: 0;
     margin-top: 3rem;
   }
 
