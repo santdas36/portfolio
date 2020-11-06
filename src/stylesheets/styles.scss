@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Work+Sans:wght@400;600;700&display=swap");
 
 :root {
-  --black: #544e61;
-  --gray: #92aabf;
-  --teal: #2d93ad;
-  --lightblue: #e9efff;
-  --white: #fff;
-  --yellow: #fed766;
+  --black: #262f3d;
+  --gray: #7b8ba4;
+  --teal: #0f97b8;
+  --lightblue: #eff7fa;
+  --white: #ffffff;
+  --yellow: #ffdb54;
 }
 
 html {
@@ -377,7 +377,7 @@ h1.hero-title {
   color: var(--lightblue);
   font-size: 3.5rem;
   text-shadow: -0.25rem 0.25rem var(--black);
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   z-index: 1;
   position: relative;
   width: fit-content;
