@@ -371,6 +371,49 @@ section#hero {
   background: var(--lightblue);
 }
 
+h1.hero-title {
+  font-weight: 900;
+  -webkit-text-stroke: 2px var(--black);
+  color: var(--lightblue);
+  font-size: 3.5rem;
+  text-shadow: -0.25rem 0.25rem var(--black);
+  font-family: "Montserrat";
+  z-index: 1;
+  position: relative;
+  width: fit-content;
+}
+
+.hero-title span {
+  position: relative;
+  z-index: 1;
+  -webkit-text-stroke: 2px var(--teal);
+  text-shadow: -0.25rem 0.25rem var(--teal);
+  white-space: nowrap;
+}
+
+.hero-title span::before {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  background: var(--yellow);
+  content: "";
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-title i {
+  position: absolute;
+  display: block;
+  width: 33%;
+  height: 0;
+  padding-bottom: 33%;
+  border-radius: 50%;
+  background: var(--yellow);
+  right: 5%;
+  top: -13%;
+  z-index: -1;
+}
+
 .about-who .hero-image {
   width: 35%;
   max-width: 300px;

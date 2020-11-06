@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.querySelector('.cursor');
   const mm = new MagnetMouse({
     magnet: {
-      element: '.cta',
+      element: '.magnet',
       class: 'cta-active',
       position: 'center',
       distance: 20,
