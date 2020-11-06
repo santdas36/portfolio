@@ -371,16 +371,10 @@ section#hero {
   background: var(--lightblue);
 }
 
-section#hero .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 5rem 8rem 5rem;
-}
 
-.container .hero-image {
+.about-who .hero-image {
   flex: 0 0 35%;
-  max-width: 25rem;
+  max-width: 20rem;
   position: relative;
   z-index: 2;
 }
@@ -395,23 +389,22 @@ img.avatar-bg {
   filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.05));
 }
 
-.container .hero-content {
+.about-who .hero-content {
   margin: auto 3rem 1rem 3rem;
 }
 
-.container .hero-content h4 {
+.hero-content h4 {
   font-weight: 800;
-  font-size: 2.25rem;
-  color: var(--white);
+  color: var(--gray);
+  opacity: 0.5;
   margin-bottom: 0;
   margin-left: -0.05rem;
   position: relative;
   display: inline;
 }
 
-.container .hero-content .title {
+.hero-content .title {
   font-weight: 800;
-  font-size: 4rem;
   margin-bottom: 1rem;
   margin-left: -0.15rem;
   line-height: 1;
@@ -479,8 +472,7 @@ img.avatar-bg {
 
 .description {
   margin-bottom: 3rem;
-  max-width: 550px;
-  font-size: 1.15em;
+  max-width: 600px;
 }
 
 .lighter {
@@ -497,7 +489,7 @@ a.lighter:hover {
 }
 
 .cta {
-  background: var(--white);
+  background: var(--lightblue);
   padding: 0.75rem 2rem 0.75rem 3.25rem;
   font-size: 1.15em;
   border-radius: 5rem;
@@ -514,7 +506,7 @@ a.lighter:hover {
 .cta-active,
 .cta:hover {
   color: var(--teal);
-  box-shadow: 0 0.5rem 1rem rgba(45, 147, 173, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .cta #hand {
@@ -555,7 +547,6 @@ a.lighter:hover {
 @media (max-width: 1150px) {
   .description {
     margin-bottom: 2rem;
-    font-size: 1.125em;
   }
 
   .cta {
@@ -567,18 +558,14 @@ a.lighter:hover {
     width: 3rem;
   }
 
-  .container .hero-content {
+  .about-who .hero-content {
     margin: auto 0 1rem 3rem;
   }
 
-  .container .hero-content h4 {
-    font-size: 1.75rem;
+  .hero-content h4 {
     margin-left: -0.05rem;
   }
 
-  .container .hero-content .title {
-    font-size: 3.5rem;
-  }
 }
 
 @media (max-width: 850px) {
@@ -590,21 +577,15 @@ a.lighter:hover {
     padding: 3rem;
   }
 
-  section#hero .container {
-    padding: 3rem 3rem 6rem 3rem;
-    flex-flow: column nowrap;
-    overflow: hidden;
-  }
-
-  .container .hero-content {
+  .about-who .hero-content {
     margin: 0;
   }
 
-  .container .hero-image {
+  .hero-image {
     display: none;
   }
 
-  .container .hero-content h4::after {
+  .hero-content h4::after {
     content: '';
     position: absolute;
     width: 100vw;
@@ -621,17 +602,16 @@ a.lighter:hover {
     width: 100%;
   }
 
-  .container .hero-content {
+  .hero-content {
     margin-top: 1rem;
   }
 
-  .container .hero-content .title {
-    font-size: 3rem;
+  .hero-content .title {
     margin-left: -0.1rem;
     line-height: 1;
   }
 
-  .container .hero-content h4 {
+  .hero-content h4 {
     margin-left: -0.05rem;
     line-height: 2;
   }
@@ -651,10 +631,6 @@ a.lighter:hover {
 
   header .container {
     padding: 2rem;
-  }
-
-  section#hero .container {
-    padding: 0 2rem 6rem 2rem;
   }
 
   header nav #navLogo {
@@ -840,36 +816,13 @@ a.lighter:hover {
 }
 
 .about-who {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 7rem;
   position: relative;
   z-index: 1;
   font-size: clamp(3em, 10vw, 7rem);
-}
-
-.about-who span {
-  display: block;
-  text-transform: uppercase;
-  white-space: nowrap;
-  line-height: 1;
-  font-weight: 900;
-  color: var(--white);
-  -webkit-text-stroke: 1.5px var(--teal);
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 3px;
-  width: fit-content;
-}
-
-.ido1 {
-  transform: translateX(-50%);
-}
-
-.about-who span.ido2 {
-  transform: translateX(50%);
-  text-shadow: 0 0 5px var(--teal);
-}
-
-.ido3 {
-  transform: translateX(-50%);
 }
 
 .about-quote > h4 {
@@ -1015,6 +968,13 @@ a.lighter:hover {
     background: transparent;
     flex: 0 0 calc(100% / 3 - 1rem);
     margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-who {
+    flex-flow: column nowrap;
+    overflow: hidden;
   }
 }
 
