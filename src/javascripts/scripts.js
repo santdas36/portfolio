@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       fetch(`https://portfolio.santdas36.vercel.app/api/new-pitch?email=${form.querySelector('input[type="email"]').value}`, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
       }).then((res) => console.log(res));
     });
   });
