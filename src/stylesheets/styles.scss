@@ -269,7 +269,7 @@ nav ul {
   display: inline-block;
 }
 
-li:last-of-type .nav-link {
+.nav-link.last {
   margin-right: -1rem;
 }
 
