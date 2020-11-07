@@ -12,6 +12,9 @@ const html = {
       loader: 'html-loader',
       options: {
         interpolate: true,
+        minimize: {
+            collapseWhitespace: false,
+        },
       },
     },
   ],
