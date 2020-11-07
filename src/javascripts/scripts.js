@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   mm.init();
 
+  const heroForm = document.querySelectorAll('.hero-form');
+  heroForm.forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch('https://portfolio.santdas36.vercel.app/api/new-pitch', {
+        method: 'POST',
+        body: new FormData(form),
+      }).then((res) => console.log(res));
+    });
+  });
+
+
   const codeDiv = document.getElementById('projects');
   const designDiv = document.getElementById('designs');
   const workCode = document.getElementById('workTypeCode');
