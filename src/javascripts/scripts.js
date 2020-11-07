@@ -46,14 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   heroForm.forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      fetch('https://portfolio.santdas36.vercel.app/api/new-pitch', {
+      fetch(`https://portfolio.santdas36.vercel.app/api/new-pitch?email=${form.querySelector('input[type="email"]').value}`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: {
-          'email': form.querySelector('input[type=email]').value,
-        },
       }).then((res) => console.log(res));
     });
   });
