@@ -5,7 +5,7 @@ export default async (request, response) => {
 		return response.status(400).send('400 Bad Request');
 	}
 
-	const doc = new GoogleSpreadsheet('1Q1TO6-jiV9_5j5UIrZDjkxBih1nAkdQDtm_LBrXx2N8');
+	const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 	await doc.useServiceAccountAuth({
 		client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
 		private_key: process.env.GOOGLE_PRIVATE_KEY,
