@@ -450,6 +450,7 @@ h1.hero-title {
   background: var(--yellow);
   right: 5%;
   top: -13%;
+  transition: transform 0.1s;
   z-index: -1;
 }
 
@@ -692,7 +693,7 @@ a.lighter:hover {
   color: var(--teal);
 }
 
-.cta-active,
+.cta.cta-active,
 .cta:hover {
   color: var(--teal);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
