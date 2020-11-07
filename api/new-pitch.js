@@ -15,7 +15,7 @@ export default async (request, response) => {
 	console.log(sheet.title);
 	console.log(sheet.rowCount);
 	const newRow = await sheet.addRow({
-		timestamp: new Date().toLocaleString('en-IN', {dateStyle: 'full', timeStyle: 'long'}),
+		timestamp: new Date().toLocaleString('en-IN', {dateStyle: 'full', timeStyle: 'long', localeMatcher: 'lookup'}),
 		email: 'ds@o.do'
 	}); 
 	console.log(newRow);
