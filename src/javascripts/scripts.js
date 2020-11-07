@@ -17,6 +17,31 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const cursor = document.querySelector('.cursor');
+  const mm = new MagnetMouse({
+    magnet: {
+      element: '.magnet',
+      class: 'cta-active',
+      position: 'center',
+      distance: 20,
+    },
+    follow: {
+      element: '.cursor',
+      class: 'cursor-active',
+    },
+    inCallback(data) {
+      cursor.style.width = data.elem.width;
+      cursor.style.height = data.elem.height;
+      cursor.style.opacity = 0;
+    },
+    outCallback() {
+      cursor.style.width = `${2}rem`;
+      cursor.style.height = `${2}rem`;
+      cursor.style.opacity = 1;
+    },
+  });
+  mm.init();
+
   const codeDiv = document.getElementById('projects');
   const designDiv = document.getElementById('designs');
   const workCode = document.getElementById('workTypeCode');
@@ -99,34 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  gsap.to('.ido1', {
-    scrollTrigger: {
-      trigger: '.ido1',
-      scrub: true,
-      start: 'top bottom',
-      end: 'bottom top',
-    },
-    x: '100%',
-  });
-  gsap.to('.ido2', {
-    scrollTrigger: {
-      trigger: '.ido2',
-      scrub: true,
-      start: 'top bottom',
-      end: 'bottom top',
-    },
-    x: '-35%',
-  });
-  gsap.to('.ido3', {
-    scrollTrigger: {
-      trigger: '.ido3',
-      scrub: true,
-      start: 'top bottom',
-      end: 'bottom top',
-    },
-    x: '70%',
-  });
-
   const navToggle = document.querySelector('.nav-toggle');
   const mobileNav = document.querySelector('.navbar');
   const anchorLinks = document.querySelectorAll('a');
@@ -164,31 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     elem.style.animation = `cElem ${(Math.floor(Math.random() * 300) / 100) + 3}s infinite ease-in-out`;
   });
 
-  const cursor = document.querySelector('.cursor');
-  const mm = new MagnetMouse({
-    magnet: {
-      element: '.magnet',
-      class: 'cta-active',
-      position: 'center',
-      distance: 20,
-    },
-    follow: {
-      element: '.cursor',
-      class: 'cursor-active',
-    },
-    inCallback(data) {
-      cursor.style.width = data.elem.width;
-      cursor.style.height = data.elem.height;
-      cursor.style.opacity = 0;
-    },
-    outCallback() {
-      cursor.style.width = `${2}rem`;
-      cursor.style.height = `${2}rem`;
-      cursor.style.opacity = 1;
-    },
-  });
-  mm.init();
-
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach((navLink) => {
     navLink.addEventListener('mouseenter', () => {
@@ -196,16 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     navLink.addEventListener('mouseleave', () => {
       cursor.classList.remove('cursor-hover');
-    });
-  });
-
-  const marquees = document.querySelectorAll('.about-who span');
-  marquees.forEach((marquee) => {
-    marquee.addEventListener('mouseenter', () => {
-      cursor.classList.add('cursor-scroll');
-    });
-    marquee.addEventListener('mouseleave', () => {
-      cursor.classList.remove('cursor-scroll');
     });
   });
 
