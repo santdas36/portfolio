@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Content-Type': 'application/json',
         },
         body: {
-          'email': form.querySelector('input[type="email"]').value,
+          'email': form.querySelector('input[type=email]').value,
         },
       }).then((res) => console.log(res));
     });
