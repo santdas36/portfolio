@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       fetch('https://portfolio.santdas36.vercel.app/api/new-pitch', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
         body: new FormData(form),
       }).then((res) => console.log(res));
     });
