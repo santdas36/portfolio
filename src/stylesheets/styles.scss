@@ -371,6 +371,39 @@ section#hero {
   background: var(--lightblue);
 }
 
+.scrollDown {
+  position: absolute;
+  transform: rotate(-90deg) translateY(500%);
+  transform-origin: left bottom;
+  right: 2rem;
+  bottom: 3rem;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.scrollDown::before {
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  content: '';
+  background: var(--black);
+  bottom: 0;
+  animation: scrollDown 1s infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateX(100%);
+  }
+  30%,
+  60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 h1.hero-title {
   font-weight: 900;
   -webkit-text-stroke: 2px var(--black);
@@ -381,6 +414,7 @@ h1.hero-title {
   z-index: 1;
   position: relative;
   width: fit-content;
+  user-select: none;
 }
 
 .hero-title span {
@@ -444,6 +478,81 @@ h1.hero-title {
 
 .hero-form .send button {
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (max-width: 850px) {
+  h1.hero-title {
+    font-size: 3rem;
+  }
+
+  h1.hero-title br {
+    display: none;
+  }
+
+  .scrollDown {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  h1.hero-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title b {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .hero-title b,
+  .hero-title b span {
+    font-size: 0.95rem;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+    color: var(--black) !important;
+    white-space: initial !important;
+  }
+
+  .hero-title b span::before {
+    display: none;
+  }
+
+  .cool {
+    font-size: 0.85rem;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    display: block !important;
+  }
+
+  form.mobile {
+    display: flex;
+  }
+
+  br.mobile {
+    display: block !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  .hero-form {
+    width: 100%;
+  }
+
+  .hero-form .email {
+    flex: calc(100% - 3rem);
+    width: calc(100% - 3rem);
+  }
+
+  .hero-form .send button {
+    width: 3rem;
+    padding: 0;
+  }
 }
 
 .about-who .hero-image {
@@ -1378,6 +1487,7 @@ a.lighter:hover {
   white-space: nowrap;
   background: var(--black);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .buttons .button:disabled {
