@@ -229,6 +229,7 @@ img {
 }
 
 .mobile,
+.hero-form.mobile,
 .nav-social.mobile,
 .nav-info.mobile {
   display: none;
@@ -369,6 +370,7 @@ li:last-of-type .nav-link {
 
 section#hero {
   background: var(--lightblue);
+  position: relative;
 }
 
 .scrollDown {
@@ -417,6 +419,7 @@ h1.hero-title {
   position: relative;
   width: fit-content;
   user-select: none;
+  margin: 0;
 }
 
 .hero-title span {
@@ -530,20 +533,18 @@ h1.hero-title {
     display: block !important;
   }
 
-  form.mobile {
+  .hero-form.mobile {
     display: flex;
+    width: 100%;
+    margin: 0;
   }
 
   br.mobile {
     display: block !important;
   }
 
-  .desktop {
+  .hero-form.desktop {
     display: none !important;
-  }
-
-  .hero-form {
-    width: 100%;
   }
 
   .hero-form .email {
