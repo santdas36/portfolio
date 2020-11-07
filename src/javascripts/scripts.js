@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     y: 50,
     opacity: 0,
     delay: 0.6,
-    stagger: 0.3,
+    stagger: 0.2,
     ease: 'power3.out',
     clearProps: 'all',
   });
