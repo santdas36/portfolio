@@ -422,7 +422,7 @@ h1.hero-title {
   margin: 0;
 }
 
-.hero-title span {
+.hero-title .highlight {
   position: relative;
   z-index: 1;
   -webkit-text-stroke: 2px var(--teal);
@@ -430,7 +430,7 @@ h1.hero-title {
   white-space: nowrap;
 }
 
-.hero-title span::before {
+.hero-title .highlight::before {
   position: absolute;
   width: 100%;
   height: 1rem;
