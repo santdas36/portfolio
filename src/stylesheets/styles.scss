@@ -395,10 +395,12 @@ section#hero {
   0% {
     transform: translateX(100%);
   }
+
   30%,
   60% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
