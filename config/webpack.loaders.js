@@ -12,7 +12,6 @@ const html = {
       loader: 'html-loader',
       options: {
         interpolate: true,
-        minimize: false,
       },
     },
   ],

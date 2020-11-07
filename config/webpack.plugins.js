@@ -73,6 +73,9 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
     meta: {
       viewport: config.viewport,
     },
+    minify: {
+      collapseWhitespace: false,
+    },
   });
 });
 
