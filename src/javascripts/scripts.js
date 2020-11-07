@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   const codeDiv = document.getElementById('projects');
   const designDiv = document.getElementById('designs');
   const workCode = document.getElementById('workTypeCode');
