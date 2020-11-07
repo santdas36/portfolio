@@ -14,6 +14,7 @@ const html = {
         interpolate: true,
         minimize: {
             collapseWhitespace: false,
+            conservativeCollapse: false,
         },
       },
     },
