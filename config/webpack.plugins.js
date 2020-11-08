@@ -95,7 +95,7 @@ const favicons = new FaviconsWebpackPlugin({
     developerName: null,
     developerURL: null,
     background: '#ffffff',
-    theme_color: '#e9efff',
+    theme_color: '#eff7fa',
     scope: '/',
     start_url: '/',
     icons: {
