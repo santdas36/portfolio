@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.focus();
     } else {
       inpSubmit.innerHTML = `<img src=${loadingIcon} class="sending"/> Sending...`;
-      fetch('/api/contact-form', {
+      fetch('/api/submit-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
