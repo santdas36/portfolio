@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailAddress = form.querySelector('input[type="email"]');
       const submitButton = form.querySelector('button.button');
       if (emailAddress.value) {
-        submitButton.disabled = 'true';
+        submitButton.disabled = true;
         submitButton.innerHTML = `<img src=${loadingIcon} class="sending"/>`;
         fetch('/api/new-pitch', {
           method: 'POST',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email: emailAddress.value,
           }),
         }).then(() => {
-          submitButton.disabled = 'false';
+          submitButton.disabled = false;
           submitButton.innerHTML = `<img src=${successIcon} class="sent"/>`;
           emailAddress.value = '';
         });
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.parentNode.classList.add('error');
       inpMessage.focus();
     } else {
-      inpSubmit.disabled = 'true';
+      inpSubmit.disabled = true;
       inpSubmit.innerHTML = `<img src=${loadingIcon} class="sending"/> Sending...`;
       fetch('/api/submit-form', {
         method: 'POST',
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
       }).then(() => {
         inpSubmit.innerHTML = `<img src=${successIcon} class="sent"/> Message Sent!`;
-        inpSubmit.disabled = 'false';
+        inpSubmit.disabled = false;
         gsap.to(contactForm, {
           opacity: 0,
           delay: 1,
