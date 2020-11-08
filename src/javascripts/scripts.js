@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitButton.innerHTML = `<img src=${successIcon} class="sent"/>`;
           emailAddress.value = '';
           toast.classList.add('shown');
-          setTimeout(() => toast.classList.remove('shown'), 5000);
+          setTimeout(() => toast.classList.remove('shown'), 7500);
         });
       }
     });
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
           delay: 1,
         });
         toast.classList.add('shown');
-        setTimeout(() => toast.classList.remove('shown'), 5000);
+        setTimeout(() => toast.classList.remove('shown'), 7500);
         setTimeout(() => {
           inpSubmit.innerHTML = 'Send Message';
           inpName.value = '';

@@ -1828,7 +1828,7 @@ footer .container {
   z-index: 99;
   padding: 1rem;
   border-radius: 0.5rem;
-  transition: all 0.2s;
+  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
   pointer-events: none;
   user-select: none;
   transform: translateY(100%) scale(0.8) skewY(-15deg);
