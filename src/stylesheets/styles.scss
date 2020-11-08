@@ -768,9 +768,10 @@ a.lighter:hover {
 }
 
 @media (max-width: 550px) {
-  .container .hero-image {
+  .about-who .hero-image {
     display: block;
     width: 90%;
+    margin: 0 auto;
   }
 
   .about-who .hero-content {
