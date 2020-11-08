@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({
           name: inpName.value,
           email: inpEmail.value,
-          name: inpMessage.value,
+          message: inpMessage.value,
         }),
       }).then(() => {
         inpSubmit.innerHTML = `<img src=${successIcon} class="sent"/> Message Sent!`;
