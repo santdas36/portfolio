@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mm.init();
 
   const heroForm = document.querySelectorAll('.hero-form');
+  const toast = document.querySelector('.toast');
   heroForm.forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -63,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
           submitButton.disabled = false;
           submitButton.innerHTML = `<img src=${successIcon} class="sent"/>`;
           emailAddress.value = '';
+          toast.classList.add('shown');
+          setTimeout(() => toast.classList.remove('shown'), 5000);
         });
       }
     });
@@ -311,6 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
           opacity: 0,
           delay: 1,
         });
+        toast.classList.add('shown');
+        setTimeout(() => toast.classList.remove('shown'), 5000);
         setTimeout(() => {
           inpSubmit.innerHTML = 'Send Message';
           inpName.value = '';

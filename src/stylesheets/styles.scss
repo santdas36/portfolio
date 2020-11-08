@@ -1813,3 +1813,58 @@ footer .container {
     text-align: center;
   }
 }
+
+.toast {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 450px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  box-shadow: 0 1rem 2rem -0.75rem rgba(0, 0, 0, 0.66);
+  z-index: 99;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  pointer-events: none;
+  user-select: none;
+  transform: translateY(100%) scale(0.8) skewY(-15deg);
+  opacity: 0;
+}
+
+.toast.shown {
+  transform: translateY(0) scale(1) skewY(0);
+  opacity: 1;
+}
+
+.toast img {
+  width: auto;
+  height: 100px;
+}
+
+.toast span {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--lightblue);
+}
+
+@media (max-width: 550px) {
+  .toast {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: calc(100% - 3rem);
+    padding: 0 0.5rem;
+  }
+
+  .toast img {
+    height: 80px;
+  }
+
+  .toast span {
+    padding: 1rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
