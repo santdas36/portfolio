@@ -280,9 +280,16 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.focus();
     } else {
       inpSubmit.innerHTML = `<img src=${loadingIcon} class="sending"/> Sending...`;
-      fetch('https://getform.io/f/af6c6fc5-8782-4368-a61c-bb5bcf811344', {
+      fetch('/api/contact-form', {
         method: 'POST',
-        body: new FormData(contactForm),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: inpName.value,
+          email: inpEmail.value,
+          name: inpMessage.value,
+        }),
       }).then(() => {
         inpSubmit.innerHTML = `<img src=${successIcon} class="sent"/> Message Sent!`;
         gsap.to(contactForm, {
