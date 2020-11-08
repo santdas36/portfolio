@@ -1,6 +1,6 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
-export default async (request, response) => {
+module.exports = async (request, response) => {
 	if (request.method !== 'POST') {
 		return response.status(400).send('400 Bad Request');
 	}
