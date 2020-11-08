@@ -46,17 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
   heroForm.forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const emailAddress = form.querySelector('input[type="email"]').value;
-      if (emailAddress) {
+      const emailAddress = form.querySelector('input[type="email"]');
+      const submitButton = form.querySelector('button.button');
+      if (emailAddress.value) {
+        submitButton.disabled = 'true';
+        submitButton.innerHTML = `<img src=${loadingIcon} class="sending"/>`;
         fetch('/api/new-pitch', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            email: emailAddress,
+            email: emailAddress.value,
           }),
-        }).then((res) => console.log(res));
+        }).then(() => {
+          submitButton.disabled = 'false';
+          submitButton.innerHTML = `<img src=${successIcon} class="sent"/>`;
+          emailAddress.value = '';
+        });
       }
     });
   });
@@ -285,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       inpMessage.parentNode.classList.add('error');
       inpMessage.focus();
     } else {
+      inpSubmit.disabled = 'true';
       inpSubmit.innerHTML = `<img src=${loadingIcon} class="sending"/> Sending...`;
       fetch('/api/submit-form', {
         method: 'POST',
@@ -298,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }),
       }).then(() => {
         inpSubmit.innerHTML = `<img src=${successIcon} class="sent"/> Message Sent!`;
+        inpSubmit.disabled = 'false';
         gsap.to(contactForm, {
           opacity: 0,
           delay: 1,
