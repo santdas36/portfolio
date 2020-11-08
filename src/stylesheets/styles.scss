@@ -477,12 +477,6 @@ h1.hero-title {
   box-shadow: inset 0 0 0 1.5px var(--teal), 0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
 }
 
-.sent,
-.sending {
-  height: 1rem;
-  width: auto;
-}
-
 .email::placeholder {
   color: var(--gray);
   font-weight: 500;
@@ -1718,11 +1712,14 @@ a.lighter:hover {
 
 #submitForm img {
   margin-right: 0.5rem;
+}
+
+img.sending {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-#submitForm img.sent {
+img.sent {
   width: 1rem;
   height: 1rem;
 }
