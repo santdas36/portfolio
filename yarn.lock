@@ -3075,7 +3075,7 @@ core-js-compat@^3.6.2:
     browserslist "^4.14.6"
     semver "7.0.0"
 
-core-js@^2.4.0:
+core-js@^2.4.0, core-js@^2.5.7:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
   integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
@@ -7693,7 +7693,7 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-object.values@^1.0.4, object.values@^1.1.0, object.values@^1.1.1:
+object.values@^1.1.0, object.values@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object.values/-/object.values-1.1.1.tgz#68a99ecde356b7e9295a3c5e0ce31dc8c953de5e"
   integrity sha512-WTa54g2K8iu0kmS/us18jEmdv1a4Wi//BZ/DTVYEcH0XhLM5NYdpDHja3gt57VrZLcNAO2WGA+KpWsDBaHt6eA==
@@ -8741,13 +8741,13 @@ prebuild-install@^5.3.4:
     tunnel-agent "^0.6.0"
     which-pm-runs "^1.0.0"
 
-preload-webpack-plugin@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/preload-webpack-plugin/-/preload-webpack-plugin-2.3.0.tgz#2923d8caff44dead93d1fe5eaab31f3b18ca0de9"
-  integrity sha512-TWpYf7QqmW9lxXIQcPAPkfO+G6Zf/WrSZtqx864IdUtqZ+QGESfOGbGSMlBBt96sYEE+cZLF2GLrxbmLyieX6g==
+preload-webpack-plugin@3.0.0-beta.3:
+  version "3.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/preload-webpack-plugin/-/preload-webpack-plugin-3.0.0-beta.3.tgz#945990d0cd90d3ecb15a2f6fc59f742e39930db6"
+  integrity sha512-pIRna/JagOd+ci64d84SfDH4bjKsM632OQ/4JIBk7Q8Kr6VH2X+7q5q3HrTilKpMzzO3ib9kC7rs1B0KXJTa6Q==
   dependencies:
-    object-assign "^4.1.1"
-    object.values "^1.0.4"
+    core-js "^2.5.7"
+    url-parse "^1.4.3"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
