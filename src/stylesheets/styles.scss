@@ -19,7 +19,7 @@
   z-index: 9999;
   display: grid;
   place-items: center;
-  transition: transform 0.75s 0.5s ease-in-out, box-shadow 1s 0.5s ease-in;
+  transition: transform 0.75s 0.75s ease-in-out, box-shadow 1s 0.75s ease-in;
   box-shadow: 0 -10rem var(--black);
 }
 
@@ -39,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: all 0.25s 0.25s;
 }
 
 .preloader.loaded .preloader-img {
