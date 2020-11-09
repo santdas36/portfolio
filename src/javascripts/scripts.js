@@ -17,10 +17,6 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const preloader = document.querySelector('.preloader');
-  preloader.classList.add('loaded');
-  setTimeout(() => preloader.remove(), 2000);
-
   const cursor = document.querySelector('.cursor');
   const mm = new MagnetMouse({
     magnet: {
@@ -336,4 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+});
+
+document.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  preloader.classList.add('loaded');
+  setTimeout(() => preloader.remove(), 2000);
 });
