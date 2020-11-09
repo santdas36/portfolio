@@ -8,7 +8,6 @@ const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -38,10 +37,6 @@ const optimizeCss = new OptimizeCssAssetsPlugin({
   },
   canPrint: true,
 });
-
-
-// Preload all files
-const preloader = new ResourceHintWebpackPlugin();
 
 // Generate robots.txt
 const robots = new RobotstxtPlugin({
@@ -164,7 +159,6 @@ module.exports = [
   config.env === 'production' && sitemap,
   config.env === 'production' && workbox,
   google,
-  preloader,
   webpackBar,
   config.env === 'development' && hmr,
 ].filter(Boolean);
