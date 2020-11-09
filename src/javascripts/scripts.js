@@ -18,10 +18,8 @@ if ('serviceWorker' in navigator) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.querySelector('.preloader');
-  setTimeout(() => {
-    preloader.classList.add('loaded');
-    setTimeout(() => preloader.remove(), 2000);
-  }, 1000);
+  preloader.classList.add('loaded');
+  setTimeout(() => preloader.remove(), 2000);
 
   const cursor = document.querySelector('.cursor');
   const mm = new MagnetMouse({
