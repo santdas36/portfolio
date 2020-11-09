@@ -9,6 +9,7 @@ module.exports = {
   entry: [
     path.join(config.root, config.paths.src, 'javascripts/scripts.js'),
     path.join(config.root, config.paths.src, 'stylesheets/styles.css'),
+    path.join(config.root, config.paths.src, 'stylesheets/imports.css'),
   ],
   output: {
     path: path.join(config.root, config.paths.dist),
