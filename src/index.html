@@ -2,8 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DASH SANTOSH | Personal Portfolio | Front-End Developer, UI/UX Designer</title>
-    <meta name="description" content="defn. a 19yr old male who once happened to click on view source of a webpage with genuine curiosity, and now is a Front-End Developer and UI/UX Designer" />
+    <title>DASH SANTOSH | Front-End Developer, UI/UX Designer | Personal Portfolio</title>
+    <meta name="description" content="Helping new businessess Expand, and the old ones Adapt to the ever-changing World of Internet, with Modern Web Solutions." />
+    
+<style>
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: var(--teal);
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  transition: transform 0.75s 0.75s ease-in-out, box-shadow 1s 0.75s ease-in;
+  box-shadow: 0 -10rem var(--black);
+}
+
+.preloader.loaded {
+  box-shadow: 0 10rem var(--black);
+  transform: translateY(100%);
+}
+
+.preloader .preloader-img {
+  position: relative;
+  width: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  height: 10vw;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s 0.25s;
+}
+
+.preloader.loaded .preloader-img {
+  opacity: 0;
+}
+
+.preloader-img svg {
+  height: 60%;
+  fill: var(--lightblue);
+}
+
+.preloader-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  animation: load 1s infinite;
+}
+
+@keyframes load {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}  
+</style>
 </head>
 <body id="top">
 
