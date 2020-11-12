@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         start: 'top bottom',
         end: 'top 10%',
       },
-      y: 80,
+      y: 90,
       ease: 'power1.inOut',
     });
   });
