@@ -231,19 +231,28 @@ header nav #navLogo {
 nav ul {
   list-style-type: none;
   display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+nav ul li + li {
+  margin-left: 1rem;
 }
 
 .nav-link {
   color: var(--black);
   position: relative;
   transition: color 0.3s;
-  padding: 0.5rem 1rem 0 1rem;
-  margin: 0 0.5rem;
+  padding: 0 1rem;
   display: inline-block;
 }
 
 .nav-link.last {
-  margin-right: -1rem;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--teal);
+  color: var(--white) !important;
+  border-radius: 99px;
 }
 
 .nav-link:hover {
@@ -834,6 +843,10 @@ a.lighter:hover {
   .navbar.open::before {
     transform: translateY(100%);
     transition-timing-function: cubic-bezier(0.79, 0.06, 0.83, 0.67);
+  }
+
+  nav ul li + li {
+    margin: 0;
   }
 
   .nav-link {
