@@ -250,12 +250,16 @@ header nav #navLogo {
 .nav-link.last {
   margin-left: 1rem;
   background: var(--teal);
-  color: var(--white) !important;
+  color: var(--white);
   border-radius: 99px;
 }
 
 .nav-link:hover {
   color: var(--teal);
+}
+
+.nav-link.last:hover {
+  color: var(--white);
 }
 
 .nav-link::before {
@@ -278,7 +282,7 @@ header nav #navLogo {
 .nav-info {
   display: flex;
   align-items: flex-end;
-  margin-top: auto;
+  margin-top: auto !important;
   align-self: center;
   color: var(--gray);
 }
@@ -855,6 +859,16 @@ a.lighter:hover {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
+  }
+
+  .nav-link.last {
+    margin-left: 0;
+    background: none;
+    color: var(--gray);
+  }
+
+  .nav-link.last:hover {
+    color: var(--teal);
   }
 
   .navbar li:last-of-type {
