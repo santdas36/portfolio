@@ -235,6 +235,10 @@ header nav #navLogo {
   align-items: center;
 }
 
+.navbar li {
+  flex: 0 0 auto;
+}
+
 .navbar li + li {
   margin-left: 1rem;
 }
@@ -245,7 +249,6 @@ header nav #navLogo {
   transition: color 0.3s;
   padding: 0.5rem 1rem;
   display: inline-block;
-  font-size: 1rem;
 }
 
 .nav-link.last {
