@@ -357,6 +357,14 @@ Modern <span class="highlight">Web Solutions.</span></b>
 	</div>
 </div>
 <div class="cursor"></div>
+<div class="cookie toast">
+	<img src="./images/cookie.png" alt="cookie image"/>
+	<span>
+		<i id="closeCookie" class="fas fa-times"></i>
+		<h5>Grab a Cookie!</h5>
+		This website uses cookies to improve your experience. Hope that's okay with you.
+	</span>
+</div>
 <div class="toast">
 	<img src="./images/woohoo.png" alt="woo-hoo"/>
 	<span>
@@ -368,7 +376,13 @@ Modern <span class="highlight">Web Solutions.</span></b>
   window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     preloader.classList.add('loaded');
-    setTimeout(() => preloader.remove(), 2000);
+    setTimeout(() => {
+      preloader.remove();
+      const cookieConsent = localStorage.get('cookieConsent');
+      if (!cookieConsent) {
+        document.querySelector('.toast.cookie').classList.add('shown');
+      }
+    }, 2000);
   });
 </script>
 <script>

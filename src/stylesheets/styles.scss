@@ -139,34 +139,6 @@ body.scrollingDisabled {
   margin-right: 0.5rem;
 }
 
-/* .preload {
-width: 100vw;
-height: 100vh;
-position: fixed;
-}
-.preload .circle {
-background: var(--white);
-border-radius: 50%;
-width: 200px;
-height: 200px;
-animation: loading 5s forwards ease-out;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: scaleY(0) scaleX(1.5) translate(-50%, -50%);
-transform-origin: 0% 0%;
-}
-@keyframes loading {
-0%, 17%, 20%  {transform: scaleY(0) scaleX(1.5) translate(-50%, -50%); left: 50%; top: 50%}
-15%, 25%, 30% {transform: scale(1) translate(-50%, -50%); left: 50%; top: 50%}
-40% {transform: scale(1.9) translate(-50%, -50%); left: 70%; top: 60%}
-50% {transform: scale(1.25) translate(-50%, 50%); left: 20%; top: 40%}
-75% {transform: scale(2.4) translate(-50%, -50%); left: 90%; top: -3rem;}
-85% {transform: scale(1.5) translate(-50%, -50%); left: -3rem; top: -3rem}
-100% {transform: scale(1.85) translate(0%, 0%); left: 5rem; top: 12rem;}
-}
-*/
-
 .wrapper {
   width: 100%;
   max-width: 1280px;
@@ -1853,6 +1825,17 @@ footer .container {
   font-family: 'Montserrat', sans-serif;
 }
 
+#closeCookie {
+  position: absolute;
+  padding: 1rem 1.15rem;
+  right: 0;
+  top: 0;
+}
+
+.toast.cookie img {
+  transform: scale(0.8);
+}
+
 @media (max-width: 550px) {
   .toast {
     right: 1.5rem;
@@ -1861,12 +1844,25 @@ footer .container {
     padding: 0 0.5rem;
   }
 
+  .toast.cookie {
+    padding: 0;
+  }
+
   .toast img {
     height: 80px;
   }
 
+  .toast.cookie img {
+    display: none;
+  }
+
   .toast span {
     padding: 1rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .toast.cookie span {
+    padding: 1rem 1.5rem;
     font-size: 0.85rem;
   }
 }
