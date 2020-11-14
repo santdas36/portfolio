@@ -375,12 +375,15 @@ Modern <span class="highlight">Web Solutions.</span></b>
 <script>
   window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
+    const cookieToast = document.querySelector('.toast.cookie');
     preloader.classList.add('loaded');
     setTimeout(() => {
       preloader.remove();
-      const cookieConsent = localStorage.get('cookieConsent');
+      const cookieConsent = localStorage.getItem('cookieConsent');
       if (!cookieConsent) {
-        document.querySelector('.toast.cookie').classList.add('shown');
+        cookieToast.classList.add('shown');
+      } else{
+        cookieToast.remove();
       }
     }, 2000);
   });
