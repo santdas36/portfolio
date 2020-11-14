@@ -1811,6 +1811,7 @@ footer .container {
 .toast.shown {
   transform: translateY(0) scale(1) skewY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .toast img {
@@ -1830,6 +1831,7 @@ footer .container {
   padding: 1rem 1.15rem;
   right: 0;
   top: 0;
+  cursor: pointer;
 }
 
 .toast.cookie img {
