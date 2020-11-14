@@ -19,7 +19,7 @@ if ('serviceWorker' in navigator) {
 document.addEventListener('DOMContentLoaded', () => {
   const cookieToast = document.querySelector('.toast.cookie');
   const closeCookie = document.querySelector('#closeCookie');
-  closeCookie.addEventListener('click', {
+  closeCookie.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', true);
     cookieToast.classList.remove('shown');
   });
