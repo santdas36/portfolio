@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const cookieToast = document.querySelector('.toast.cookie');
+  const cookieToast = document.querySelector('.cookieToast');
   const closeCookie = document.querySelector('#closeCookie');
   closeCookie.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', true);
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mm.init();
 
   const heroForm = document.querySelectorAll('.hero-form');
-  const toast = document.querySelector('.toast');
+  const toast = document.querySelector('.successToast');
   heroForm.forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
