@@ -104,6 +104,7 @@ body.scrollingDisabled {
   padding: 0.33rem 0.66rem;
   border-radius: 0 0 0.5rem 0.5rem;
   cursor: pointer;
+  user-select: none;
 }
 
 @media (min-width: 1150px) {
@@ -1806,6 +1807,7 @@ footer .container {
   user-select: none;
   transform: translateY(100%) scale(0.8) skewY(-15deg);
   opacity: 0;
+  user-select: none;
 }
 
 .toast.shown {
