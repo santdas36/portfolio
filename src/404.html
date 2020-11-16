@@ -2,10 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Static Site Boilerplate</title>
-    <meta name="description" content="" />
+    <title>Error 404 - Page not Found</title>
+    <meta name="description" content="Helping new businessess Expand, and the old ones Evolve in this avant-garde World of Internet, with Modern Web Solutions." />
+    
+<style>
+#errorPage .container {
+padding-top: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+min-height: 600px;
+height: calc(100% - 20rem);
+}
+.errorImg {
+width: 100%;
+max-width: 600px;
+height: auto;
+}
+#errorPage h1 {
+font-weight: 900;
+margin-top: 1rem;
+}
+#errorPage .buttons {
+margin-top: 3rem;
+}
+.wrapper {
+min-height: 100vh;
+position: relative;
+padding-bottom: 20rem;
+}
+footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+</style>
 </head>
-<body>
+<body id="top">
 
+<div class="wrapper">
+<header>
+	<div class="container">
+	<nav>
+		<img inline src="./images/logo.svg" id="navLogo">
+		<span class="nav-toggle mobile"></span>
+		<ul class="navbar">
+			<li class="mobile"><a href="https://dashsantosh.ga" class="nav-link">Home</a></li>
+			<li><a href="https://dashsantosh.ga/#about" class="nav-link">About</a></li>
+			<li><a href="https://dashsantosh.ga/#work" class="nav-link">Work</a></li>
+			<li><a href="https://dashsantosh.ga/#contact" class="nav-link last">Contact</a></li>
+			<li class="nav-info mobile">
+				<img inline src="./images/logo.svg"/>
+				<span>
+					<h3>Dash Santosh</h3>
+					<p>Front-End Developer</p>
+				</span>
+			</li>
+			<li class="nav-social mobile">
+				<a href="https://github.com/santdas36" rel="noreferrer" target="_blank" aria-label="Github"><span class="fab fa-fw fa-github"></span></a>
+				<a href="https://dribbble/santdas36" rel="noreferrer" target="_blank" aria-label="Dribbble"><span class="fab fa-fw fa-dribbble"></span></a>
+				<a href="https://instagram.com/santdas36" rel="noreferrer" target="_blank" aria-label="Instagram"><span class="fab fa-fw fa-instagram"></span></a>
+				<a href="https://www.linkedin.com/in/santdas36" rel="noreferrer" target="_blank" aria-label="LinkedIn"><span class="fab fa-fw fa-linkedin-in"></span></a>
+			</li>
+		</ul>
+	</nav>
+	</div>
+</header>
+
+<main>
+	<section id="errorPage">
+		<div class="container">
+			<img class="errorImg" inline src="./images/404.svg"/>
+			<h1>This page doesn't exist!</h1>
+			<p>You must have followed an incorrect link. If you think this is a mistake, let me know.</p>
+			<div class="buttons">
+				<a href="https://dashsantosh.ga" class="button buttonPrimary">Go back Home</a>
+			</div>
+		</div>
+	</section>	
+</main>
+
+<footer>
+	<div class="container">
+		<a href="#top" aria-label="Back To Top"><span class="fas fa-chevron-up backToTop"></span></a>
+		<div class="footer-inner">
+			<div class="nav-info">
+				<img inline src="./images/logo.svg" />
+				<span>
+					<h3>Dash Santosh</h3>
+					<p>Front-End Developer</p>
+				</span>
+			</div>
+			<span class="nav-social">
+				<a href="https://github.com/santdas36" rel="noreferrer" target="_blank" aria-label="Github"><span class="fab fa-fw fa-github"></span></a>
+				<a href="https://dribbble/santdas36" rel="noreferrer" target="_blank" aria-label="Dribbble"><span class="fab fa-fw fa-dribbble"></span></a>
+				<a href="https://instagram.com/santdas36" rel="noreferrer" target="_blank" aria-label="Instagram"><span class="fab fa-fw fa-instagram"></span></a>
+				<a href="https://www.linkedin.com/in/santdas36" rel="noreferrer" target="_blank" aria-label="LinkedIn"><span class="fab fa-fw fa-linkedin-in"></span></a>
+			</span>
+		</div>
+		<span class="copyright">
+		Salem, India <br>
+		dashsantosh@pm.me <br>
+		Copyright &copy; 2020
+		</span>
+	</div>
+</footer>
+<div class="cursor"></div>
+<div class="toast cookieToast">
+	<img src="./images/cookie.png" alt="cookie image"/>
+	<span>
+		<i id="closeCookie" class="fas fa-times"></i>
+		<h5>Grab a Cookie!</h5>
+		This website uses cookies to improve your experience. Hope that's okay with you.
+	</span>
+</div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    const cookieToast = document.querySelector('.toast.cookie');
+    setTimeout(() => {
+      const cookieConsent = localStorage.getItem('cookieConsent');
+      if (!cookieConsent) {
+        cookieToast.classList.add('shown');
+      } else{
+        cookieToast.remove();
+      }
+    }, 2000);
+  });
+</script>
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "3wf4l7mpvo");
+</script>
 </body>
 </html>
