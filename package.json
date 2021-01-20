@@ -83,7 +83,7 @@
     "figlet": "^1.2.3",
     "ftp-deploy": "^2.3.3",
     "google-spreadsheet": "^3.0.13",
-    "gsap": "^3.5.1",
+    "gsap": "^3.6.0",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "reset-css": "^4.0.1",
