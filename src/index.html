@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DASH SANTOSH | Front-End Developer, UI/UX Designer | Web Portfolio</title>
+    <meta name="description" content="Helping new businessess Expand, and the old ones Evolve in this avant-garde World of Internet, with Modern Web Solutions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <meta property=”og:url” content=”http://dashsantosh.me” />
+    <meta property="og:title" content="DASH SANTOSH | Front-End Developer, UI/UX Designer | Web Portfolio"/>
+    <meta property="og:description" content="Helping new businessess Expand, and the old ones Evolve in this avant-garde World of Internet, with Modern Web Solutions." />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://github.com/santdas36/portfolio/raw/master/src/images/thumbnail.jpg"/>
+<style>
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: var(--teal);
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  transition: transform 0.75s 0.75s ease-in-out, box-shadow 1s 0.75s ease-in;
+  box-shadow: 0 -10rem var(--black);
+}
+
+.preloader.loaded {
+  box-shadow: 0 10rem var(--black);
+  transform: translateY(100%);
+}
+
+.preloader .preloader-img {
+  position: relative;
+  width: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  height: 10vw;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s 0.25s;
+}
+
+.preloader.loaded .preloader-img {
+  opacity: 0;
+}
+
+.preloader-img svg {
+  height: 60%;
+  fill: var(--lightblue);
+}
+
+.preloader-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  animation: load 1s infinite;
+}
+
+@keyframes load {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}  
+</style>
+</head>
+<body id="top">
+
+<div class="preloader">
+	<div class="preloader-img">
+		<img inline src="./images/logo.svg" />
+	</div>
+</div>
+
+<div class="wrapper">
+<header>
+	<div class="container">
+	<nav>
+		<img inline src="./images/logo.svg" id="navLogo">
+		<span class="nav-toggle mobile"></span>
+		<ul class="navbar">
+			<li class="mobile"><a href="#top" class="nav-link">Home</a></li>
+			<li><a href="#about" class="nav-link">About</a></li>
+			<li><a href="#work" class="nav-link">Work</a></li>
+			<li><a href="#contact" class="nav-link last">Contact</a></li>
+			<li class="nav-info mobile">
+				<img inline src="./images/logo.svg"/>
+				<span>
+					<h3>Dash Santosh</h3>
+					<p>Front-End Developer</p>
+				</span>
+			</li>
+			<li class="nav-social mobile">
+				<a href="https://github.com/santdas36" rel="noreferrer" target="_blank" aria-label="Github"><span class="fab fa-fw fa-github"></span></a>
+				<a href="https://dribbble.com/santdas36" rel="noreferrer" target="_blank" aria-label="Dribbble"><span class="fab fa-fw fa-dribbble"></span></a>
+				<a href="https://instagram.com/santdas36" rel="noreferrer" target="_blank" aria-label="Instagram"><span class="fab fa-fw fa-instagram"></span></a>
+				<a href="https://www.linkedin.com/in/santdas36" rel="noreferrer" target="_blank" aria-label="LinkedIn"><span class="fab fa-fw fa-linkedin-in"></span></a>
+			</li>
+		</ul>
+	</nav>
+	</div>
+</header>
+
+<main>
+	<section id="hero">
+	<div class="hero-inner">
+		<div class="container split one">
+			<h1 class="hero-title">
+<span class="title-top">Expand. Evolve.<i class="magnet"></i></span>
+Give your <wbr/>business<wbr/> a boost, with Websites<wbr/> that <span class="highlight">make sense..!
+<img src="./images/underline.svg" alt="underline" inline>
+</span>
+			</h1>
+			<span class="cool">Wanna hear my pitch?</span>
+			<form class="hero-form desktop">
+				<input type="email" aria-label="email address" name="email" class="email" class="inputElem" placeholder="Type in your Email Address" required/>
+				<div class="buttons send">
+					<button type="submit" class="button buttonPrimary">Sure, why not!</button>
+				</div>
+			</form>
+			<form class="hero-form mobile">
+				<input type="email" aria-label="email address" name="email" class="email" class="inputElem" placeholder="Email Address" required/>
+				<div class="buttons send">
+					<button type="submit" class="button buttonPrimary" aria-label="Submit Email"><span class="fas fa-paper-plane"></span></button>
+				</div>
+			</form>
+		</div>
+		<div class="container split two">
+			<img src="./images/hero.svg" inline alt="hero image">
+		</div>
+	</div>
+		<a href="#about" class="scrollDown" aria-label="scroll down"></a>
+	</section>
+	<section id="about">
+		<div class="container">
+		<h3 class="heading">Who Am I?</h3>
+			<div class="about-who">
+				<div class="hero-image">
+					<img alt="avatar backbround" class="avatar-bg" src="./images/avatar-bg.png" />
+					<img alt="avatar image" class="avatar" src="./images/avatar.png" />
+				</div>
+				<div class="hero-content">
+					<h4>HELLO. THIS IS</h4>
+					<h1 class="title">DASH SANTOSH</h1>
+					<p class="phonetics">
+						<span class="lighter">(n.) /dhɑːs sʌnθəʊʃ/</span>
+						<img inline id="playAudio" src="./images/speaker.svg"/>
+					</p>
+					<p class="description"><span class="lighter">defn.</span> a male of South Indian descent, who once happened to click on <wbr/>'View Source' of a webpage with genuine curiosity, and now is <wbr/>a <b>Front-End Developer</b> and <b>UI/UX Designer</b> <a href="#work" class="lighter"><small>[more]</small></a></p>
+					<a class="cta magnet" href="#contact">
+						Say "Hi"
+						<img inline src="./images/hand.svg" id="hand" />
+					</a>
+				</div>
+			</div>
+		<h3 class="heading">What Do I Do?</h3>
+		<!--div class="about-quote">
+			<div class="quote">
+				<h4>What separates Design from Art is that <wbr/>Design is meant to be - functional.</h4>
+				<i class="cite">Cameron Moll</i>
+				<span class="fas fa-quote-right"></span>
+			</div>
+			<br />
+			<h4>And I, make it functional.</h4>
+		</div-->
+		<div class="services">
+			<div class="service">
+				<img inline src="./images/web.svg" class="service-icon" />
+				<h4>Web Design and <wbr/>Development</h4>
+				<p>Starting from single page landing sites to e-commerce sites, I help you visualize what you think, in the form of full-fledged websites and design prototypes.</p>
+			</div>
+			<div class="service">
+				<img inline src="./images/graph.svg" class="service-icon" />
+				<h4>Targeted, Results <wbr/>Providing Sites</h4>
+				<p>With years of experience and extensive market research, the sites I build are targeted and user-oriented websites, that'll increase your overall conversion rate.</p>
+			</div>
+			<div class="service">
+				<img inline src="./images/notes.svg" class="service-icon" />
+				<h4>Copywriting and <wbr/>Online Strategies</h4>
+				<p>A good copy does what thousands of better designs can't. That, along with other strategies like SEO, AdSense, Analytics etc. can take you far - in the long run.</p>
+			</div>
+		</div>
+		</div>
+	</section>
+	
+	<section id="work">
+		<div class="container">
+			<div class="work-header">
+				<h3 class="heading white">What I've done?</h3>
+				<div class="work-radio">
+					<span class="work-option">
+						<input type="radio" name="workType" value="code" id="workTypeCode" checked/>
+						<label for="workTypeCode"><span class="fas fa-code"></span> Code</label>
+					</span>
+					<span class="work-option">
+						<input type="radio" name="workType" value="design" id="workTypeDesign"/>
+						<label for="workTypeDesign"><span class="fas fa-magic"></span> Design</label>
+					</span>
+				</div>
+			</div>
+			<div class="projects" id="projects">
+				<div class="project">
+					<div class="project-images">
+						<img alt="amazon screenshot" loading="lazy" class="big" src="./images/code/amazon.webp" />
+						<img alt="amazon mobile screenshot" loading="lazy" class="small" src="./images/code/amazon-small.webp" />
+					</div>
+					<div class="project-details">
+						<h4>Amazon-ish</h4>
+						<p class="project-desc">Amazon redesign with a modern UI, complete E-Commerce functionality including Payment Processing (Stripe API) and User Authentication (Firebase).</p>
+						<p class="stack"><b>Tech Stack: </b>React Router, Payment Processing with Stripe API, Firebase, Framer Motion</p>
+						<div class="buttons">
+							<a rel="noreferrer" target="_blank" href="https://amazon-ish.vercel.app" class="button buttonPrimary">Live Preview</a>
+							<a rel="noreferrer" target="_blank" href="https://github.com/santdas36/amazon-ish" class="button buttonText">View Code</a>
+						</div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project-images">
+						<img alt="tmdb screenshot" loading="lazy" class="big" src="./images/code/tmdb.webp" />
+						<img alt="tmdb mobile screenshot" loading="lazy" class="small" src="./images/code/tmdb-small.webp" />
+					</div>
+					<div class="project-details">
+						<h4>TMDb-ish</h4>
+						<p class="project-desc">A compact single page application to browse and search for your favorite Movies and TV Shows. API provided by themoviedb.org </p>
+						<p class="stack"><b>Tech Stack: </b>ReactJs, Axios, Single Page Application</p>
+						<div class="buttons">
+							<a rel="noreferrer" target="_blank" href="https://tmdb-ish.vercel.app" class="button buttonPrimary">Live Preview</a>
+							<a rel="noreferrer" target="_blank" href="https://github.com/santdas36/tmdb-ish" class="button buttonText">View Code</a>
+						</div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project-images">
+						<img alt="spotify screenshot" loading="lazy" class="big" src="./images/code/spotify.webp" />
+						<img alt="spotify mobile screenshot" loading="lazy" class="small" src="./images/code/spotify-small.webp" />
+					</div>
+					<div class="project-details">
+						<h4>Spotify-ish</h4>
+						<p class="project-desc">A Spotify - based Web Player, built with ReactJs, which uses the offical Spotify API to obtain user's details, playlists and control play state.</p>
+						<p class="stack"><b>Tech Stack: </b>ReactJs, Third Party Authentication, Spotify API</p>
+						<div class="buttons">
+							<a rel="noreferrer" target="_blank" href="https://spotify-ish.vercel.app" class="button buttonPrimary">Live Preview</a>
+							<a rel="noreferrer" target="_blank" href="https://github.com/santdas36/spotify-ish" class="button buttonText">View Code</a>
+						</div>
+					</div>
+				</div>
+				<div class="view-more buttons">
+					<a href="https://github.com/santdas36" rel="noreferrer" target="_blank" class="button buttonSecondary">
+						<span class="fab fa-github"></span> View More
+					</a>
+				</div>
+			</div>
+			<div class="designs" id="designs">
+				<div class="design">
+					<img alt="Srihayaas Bridal Studios Site" loading="lazy" src="./images/design/srihayaas.webp" />
+				</div>
+				<div class="design">
+					<img alt="NxtLvl Website Landing Page Concept" loading="lazy" src="./images/design/nxtlvl.webp" />
+				</div>
+				<div class="design">
+					<img alt="Photography Site and Gallery Design" loading="lazy" src="./images/design/photography.webp" />
+				</div>
+				<div class="design">
+					<img alt="Dits and Dahs Blog" loading="lazy" src="./images/design/ditsndahs.webp" />
+				</div>
+				<div class="design">
+					<img alt="Zeyes Pro Website Design" loading="lazy" src="./images/design/zeyes.webp" />
+				</div>
+				<div class="design">
+					<img alt="VP404 Solutions Website Design" loading="lazy" src="./images/design/vp404.webp" />
+				</div>
+				<div class="design">
+					<img alt="Google Dark Mode UI Concept" loading="lazy" src="./images/design/google.webp" />
+				</div>
+				<div class="design">
+					<img alt="Gradients Concept Design" loading="lazy" src="./images/design/gradients.webp" />
+				</div>
+				<div class="design">
+					<img alt="SantDas - old portfolio site" loading="lazy" src="./images/design/santdas.webp" />					
+				</div>
+				<div class="view-more buttons"><a href="https://dribbble.com/santdas36" rel="noreferrer" target="_blank" class="button buttonSecondary"><span class="fab fa-dribbble"></span> View More</a></div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="contact">
+		<div class="container">
+			<h3 class="heading">Let's Talk Business!</h3>
+			<div class="contact-inner">
+				<div class="contact-info">
+					<img inline src="./images/contact.svg" />
+					<div class="contact-info-inner">
+						<p>Have a startling idea, but don't know where to begin? Now is the time to put all those crazy ideas into action.</p>
+						<h5>Let's make it work.</h5>
+						<h3><a href="mailto:hello@dashsantosh.me">hello@dashsantosh.me</a></h3>
+						<h3><a href="tel:+917867943737">+91 7867 94 3737</a></h3>
+					</div>
+				</div>
+				<form class="contact-form">
+					<h5>I'd love to hear from you</h5>
+					<div class="form-input">
+						<input type="text" name="name" id="name" class="inputElem" />
+						<label for="name">Name</label>
+						<p class="error">Please enter your name</p>
+					</div>
+					<div class="form-input">
+						<input type="email" name="email" id="email" class="inputElem" />
+						<label for="email">Email Address</label>
+						<p class="error">Enter a valid email address</p>
+					</div>
+					<div class="form-input">
+						<textarea name="message" id="message" class="inputElem"></textarea>
+						<label for="message">Message</label>
+						<p class="error">Come on, pour your heart out...</p>
+					</div>
+					<div class="form-input buttons">
+						<button type="submit" class="button buttonPrimary" id="submitForm">Send Message</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<div class="container">
+		<a href="#top" aria-label="Back To Top" class="backToTop"><span class="fas fa-chevron-up"></span></a>
+		<div class="footer-inner">
+			<div class="nav-info">
+				<img inline src="./images/logo.svg" />
+				<span>
+					<h3>Dash Santosh</h3>
+					<p>Front-End Developer</p>
+				</span>
+			</div>
+			<span class="nav-social">
+				<a href="https://github.com/santdas36" rel="noreferrer" target="_blank" aria-label="Github"><span class="fab fa-fw fa-github"></span></a>
+				<a href="https://dribbble.com/santdas36" rel="noreferrer" target="_blank" aria-label="Dribbble"><span class="fab fa-fw fa-dribbble"></span></a>
+				<a href="https://instagram.com/santdas36" rel="noreferrer" target="_blank" aria-label="Instagram"><span class="fab fa-fw fa-instagram"></span></a>
+				<a href="https://www.linkedin.com/in/santdas36" rel="noreferrer" target="_blank" aria-label="LinkedIn"><span class="fab fa-fw fa-linkedin-in"></span></a>
+			</span>
+		</div>
+		<span class="copyright">
+		Salem, India <br>
+		hello@dashsantosh.me <br>
+		Copyright &copy; 2020
+		</span>
+	</div>
+</footer>
+<div class="image-modal">
+	<span class="modal-close">Close</span>
+	<div class="image-modal-inner">
+		<img alt="fullscreen image" src=""/>
+	</div>
+</div>
+<div class="cursor"></div>
+<div class="toast cookieToast">
+	<img src="./images/cookie.webp" alt="cookie image"/>
+	<span>
+		<b id="closeCookie"><i class="fas fa-times"></i></b>
+		<h5>Grab a Cookie!</h5>
+		This website uses cookies to improve your experience. Hope that's okay with you.
+	</span>
+</div>
+<div class="toast successToast">
+	<img src="./images/woohoo.webp" alt="woo-hoo"/>
+	<span>
+		<strong>Thanks. You'll hear from me within 24 hours. Keep an eye on your Inbox.</strong>
+	</span>
+</div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    const cookieToast = document.querySelector('.toast.cookieToast');
+    preloader.classList.add('loaded');
+    setTimeout(() => {
+      preloader.remove();
+      const cookieConsent = localStorage.getItem('cookieConsent');
+      if (!cookieConsent) {
+        cookieToast.classList.add('shown');
+      } else{
+        cookieToast.remove();
+      }
+    }, 2000);
+  });
+</script>
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "5fxcohboqb");
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164978597-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164978597-1');
+</script>
+</body>
+</html>
