@@ -84,10 +84,12 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
 
 
 // Sitemap
-const sitemap = new SitemapPlugin(config.site_url, paths, {
-  priority: 1.0,
-  lastmodrealtime: true,
-});
+const sitemap = new SitemapPlugin(config.site_url, [{
+	path: '/',
+	lastmod: '2021-02-17',
+	priority: 1,
+	changefreq: 'weekly'
+}]);
 
 // Favicons
 const favicons = new FaviconsWebpackPlugin({
