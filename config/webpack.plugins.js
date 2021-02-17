@@ -149,10 +149,6 @@ class GoogleAnalyticsPlugin {
   }
 }
 
-const google = new GoogleAnalyticsPlugin({
-  id: config.googleAnalyticsUA,
-});
-
 module.exports = [
   clean,
   ...generateHTMLPlugins(),
