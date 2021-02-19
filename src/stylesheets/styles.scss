@@ -1963,6 +1963,11 @@ footer .container {
   height: 100px;
 }
 
+.toast h5 {
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
 .toast span {
   padding: 1rem;
   font-size: 1rem;
@@ -2001,13 +2006,12 @@ footer .container {
 
   .toast.cookieToast img {
     height: 60px;
-    margin: auto 0.75rem auto 1.5rem;
+    margin: auto 1.5rem;
     transform: none;
   }
 
   .toast h5 {
     font-size: 1rem;
-    font-weight: 800;
   }
 
   .toast span {
