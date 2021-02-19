@@ -2000,7 +2000,8 @@ footer .container {
   }
 
   .toast.cookieToast img {
-    transform: scale(0.75);
+    height: 60px;
+    margin: auto 0.75rem auto 1.5rem;
   }
 
   .toast h5 {
@@ -2015,6 +2016,7 @@ footer .container {
 
   .toast.cookieToast span {
     padding: 1rem 1.5rem;
+    padding-left: 0;
     font-size: 0.85rem;
   }
 }
