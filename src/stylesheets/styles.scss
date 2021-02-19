@@ -1979,7 +1979,7 @@ footer .container {
   cursor: pointer;
 }
 
-.toast.cookie img {
+.toast.cookieToast img {
   transform: scale(0.8);
 }
 
@@ -1991,7 +1991,7 @@ footer .container {
     padding: 0 0.5rem;
   }
 
-  .toast.cookie {
+  .toast.cookieToast {
     padding: 0;
   }
 
@@ -1999,8 +1999,13 @@ footer .container {
     height: 80px;
   }
 
-  .toast.cookie img {
+  .toast.cookieToast img {
     display: none;
+  }
+
+  .toast h5 {
+    font-size: 1rem;
+    font-weight: 800;
   }
 
   .toast span {
@@ -2008,7 +2013,7 @@ footer .container {
     font-size: 0.85rem;
   }
 
-  .toast.cookie span {
+  .toast.cookieToast span {
     padding: 1rem 1.5rem;
     font-size: 0.85rem;
   }
