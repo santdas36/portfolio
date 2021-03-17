@@ -759,6 +759,7 @@ a.lighter:hover {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   color: var(--teal);
+  z-index: 2;
 }
 
 .cta.cta-active,
