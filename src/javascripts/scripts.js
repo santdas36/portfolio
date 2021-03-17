@@ -193,16 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
     elem.style.animation = `cElem ${(Math.floor(Math.random() * 300) / 100) + 3}s infinite ease-in-out`;
   });
 
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach((navLink) => {
-    navLink.addEventListener('mouseenter', () => {
-      cursor.classList.add('cursor-hover');
-    });
-    navLink.addEventListener('mouseleave', () => {
-      cursor.classList.remove('cursor-hover');
-    });
-  });
-
   const playlist = [require('../audio/holdmedown.mp3'), require('../audio/radioactive.mp3'), require('../audio/chlorine.mp3'), require('../audio/clementine.mp3'), require('../audio/whatever.mp3'), require('../audio/thunder.mp3'), require('../audio/yesterday.mp3')];
 
   const audioElement = document.createElement('audio');
