@@ -40,31 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cookieToast.classList.remove('shown');
   });
 
-  const cursor = document.querySelector('.cursor');
-  const mm = new MagnetMouse({
-    magnet: {
-      element: '.magnet',
-      class: 'cta-active',
-      position: 'center',
-      distance: 20,
-    },
-    follow: {
-      element: '.cursor',
-      class: 'cursor-active',
-    },
-    inCallback(data) {
-      cursor.style.width = data.elem.width;
-      cursor.style.height = data.elem.height;
-      cursor.style.opacity = 0;
-    },
-    outCallback() {
-      cursor.style.width = `${2}rem`;
-      cursor.style.height = `${2}rem`;
-      cursor.style.opacity = 1;
-    },
-  });
-  mm.init();
-
   const heroForm = document.querySelectorAll('.hero-form');
   const toast = document.querySelector('.successToast');
   heroForm.forEach((form) => {
@@ -279,6 +254,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  const cursor = document.querySelector('.cursor');
+  const mm = new MagnetMouse({
+    magnet: {
+      element: '.magnet',
+      class: 'cta-active',
+      position: 'center',
+      distance: 20,
+    },
+    follow: {
+      element: '.cursor',
+      class: 'cursor-active',
+    },
+    inCallback(data) {
+      cursor.style.width = data.elem.width;
+      cursor.style.height = data.elem.height;
+      cursor.style.opacity = 0;
+    },
+    outCallback() {
+      cursor.style.width = `${2}rem`;
+      cursor.style.height = `${2}rem`;
+      cursor.style.opacity = 1;
+    },
+  });
+  mm.init();
 
   const contactForm = document.querySelector('.contact-form');
   const inputElems = document.querySelectorAll('.inputElem');
