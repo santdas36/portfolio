@@ -255,13 +255,6 @@ export default class MagnetMouse {
           this.hoverElement(posElement, posMouse);
         }
 
-        // Follow mouse
-        if (this.elementFollow.length > 0) {
-          for (let i = 0; i < this.elementFollow.length; i++) {
-            this.elementFollow[i].style.transform = 'translate3d(' + (posMouse.x - (this.elementFollow[i].offsetWidth / 2 + window.pageXOffset)) + 'px,' + (posMouse.y - (this.elementFollow[i].offsetHeight / 2 + window.pageYOffset)) + 'px, 0)';
-          }
-        }
-
       }, this.config.throttle);
 
       window.addEventListener('resize', this.resizeFunction);
