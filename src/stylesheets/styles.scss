@@ -49,14 +49,7 @@ body.scrollingDisabled {
   width: 4rem !important;
   height: 4rem !important;
   background: var(--yellow);
-  z-index: 0;
-}
-
-.cursor-scroll {
-  width: 10rem !important;
-  height: 10rem !important;
-  background: var(--yellow);
-  z-index: 0;
+  z-index: 0 !important;
 }
 
 .image-modal {
