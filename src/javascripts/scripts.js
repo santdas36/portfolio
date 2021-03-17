@@ -254,28 +254,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-
-  const cursor = document.querySelector('.cursor');
+  
   const mm = new MagnetMouse({
     magnet: {
       element: '.magnet',
       class: 'cta-active',
       position: 'center',
       distance: 20,
-    },
-    follow: {
-      element: '.cursor',
-      class: 'cursor-active',
-    },
-    inCallback(data) {
-      cursor.style.width = data.elem.width;
-      cursor.style.height = data.elem.height;
-      cursor.style.opacity = 0;
-    },
-    outCallback() {
-      cursor.style.width = `${2}rem`;
-      cursor.style.height = `${2}rem`;
-      cursor.style.opacity = 1;
     },
   });
   mm.init();
