@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-  
+
   const mm = new MagnetMouse({
     magnet: {
       element: '.magnet',
