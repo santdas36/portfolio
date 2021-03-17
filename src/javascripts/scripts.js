@@ -245,14 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const mm = new MagnetMouse({
-    magnet: {
-      element: '.magnet',
-      class: 'cta-active',
-      position: 'center',
-      distance: 20,
-    },
-  });
+  const mm = new MagnetMouse();
   mm.init();
 
   const contactForm = document.querySelector('.contact-form');

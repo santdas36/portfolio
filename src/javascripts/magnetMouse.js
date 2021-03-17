@@ -5,10 +5,10 @@ export default class MagnetMouse {
   constructor(config) {
 
     const magnet = {
-      element: '.magnet-mouse',
-      class: 'magnet-mouse-active',
+      element: '.magnet',
+      class: 'cta-active',
       enabled: true,
-      distance: 30,
+      distance: 20,
       position: 'center'
     };
 
