@@ -29,7 +29,7 @@ export default class MagnetMouse {
       ...defaults,
       ...config,
       magnet: {
-        ...magnet, ...config.magnet
+        ...magnet
       },
       follow: {
         ...follow, ...config.follow
