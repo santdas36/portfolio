@@ -224,11 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
   designContainer.forEach((div) => {
     ScrollTrigger.create({
       trigger: div,
-      start: "top center",
-      end: "bottom center",
+      start: 'top center',
+      end: 'bottom center',
       toggleClass: {
         targets: div,
-        className: active,
+        className: 'active',
       },
     });
   });
