@@ -1410,11 +1410,6 @@ a.lighter:hover {
   cursor: pointer;
 }
 
-.design:hover {
-  box-shadow: 0 0.5rem 1.5rem rgba(45, 147, 173, 0.5);
-  transform: scale(1.025);
-}
-
 .design img {
   position: absolute;
   height: 100%;
@@ -1423,10 +1418,6 @@ a.lighter:hover {
   transition: all 0.2s;
   filter: grayscale(100%);
   will-change: filter;
-}
-
-.design:hover img {
-  filter: grayscale(0%);
 }
 
 .design::before {
@@ -1439,10 +1430,6 @@ a.lighter:hover {
   mix-blend-mode: overlay;
   transition: opacity 0.2s;
   pointer-events: none;
-}
-
-.design:hover::before {
-  opacity: 0;
 }
 
 @media (max-width: 1150px) {
@@ -1475,6 +1462,21 @@ a.lighter:hover {
   }
 }
 
+@media (min-width: 551px) {
+  .design:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(45, 147, 173, 0.5);
+    transform: scale(1.025);
+  }
+
+  .design:hover img {
+    filter: grayscale(0%);
+  }
+
+  .design:hover::before {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 550px) {
   .designs {
     width: 100%;
@@ -1491,6 +1493,19 @@ a.lighter:hover {
   .design:nth-of-type(8),
   .design:nth-of-type(9) {
     display: none;
+  }
+
+  .design.active {
+    box-shadow: 0 0.5rem 1.5rem rgba(45, 147, 173, 0.5);
+    transform: scale(1.025);
+  }
+
+  .design.active img {
+    filter: grayscale(0%);
+  }
+
+  .design.active::before {
+    opacity: 0;
   }
 
   .work-header {

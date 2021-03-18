@@ -216,9 +216,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const designImages = document.querySelectorAll('.design img');
+  const designContainer = document.querySelectorAll('.design');
   const imgModal = document.querySelector('.image-modal');
   const imgModalInner = document.querySelector('.image-modal-inner');
   const imgModalImage = document.querySelector('.image-modal-inner img');
+
+  designContainer.forEach((div) => {
+    ScrollTrigger.create({
+      trigger: div,
+      start: "top center",
+      end: "bottom center",
+      toggleClass: {
+        targets: div,
+        className: active,
+      },
+    });
+  });
 
   designImages.forEach((image) => {
     image.addEventListener('click', (e) => {
