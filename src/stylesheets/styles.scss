@@ -1980,6 +1980,15 @@ footer .container {
   transform: scale(0.8);
 }
 
+.toast a {
+  border-bottom: 1px dashed var(--black);
+}
+
+.toast a:hover {
+  border-bottom: 1px dashed var(--yellow);
+  color: var(--yellow);
+}
+
 @media (max-width: 550px) {
   .toast {
     right: 1.5rem;
