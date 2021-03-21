@@ -1989,6 +1989,10 @@ footer .container {
   color: var(--yellow);
 }
 
+.toast span.cookieOkay {
+  padding: 0;
+}
+
 @media (max-width: 550px) {
   .toast {
     right: 1.5rem;
