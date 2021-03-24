@@ -257,24 +257,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const cta = document.querySelector("a.cta");
-  const ctaBox = document.querySelector(".cta-box");
-  ctaBox.addEventListener("pointerenter", (e) => {
+  const cta = document.querySelector('a.cta');
+  const ctaBox = document.querySelector('.cta-box');
+  ctaBox.addEventListener('pointerenter', () => {
     gsap.to(cta, 0.3, { x: 0, y: 0 });
   });
-  ctaBox.addEventListener("pointerleave", (e) => {
+  ctaBox.addEventListener('pointerleave', () => {
     gsap.to(cta, 0.3, { x: 0, y: 0 });
   });
-  ctaBox.addEventListener("pointermove", (e) => {
-    let boundingRect = ctaBox.getBoundingClientRect();
-    let ctaBR = cta.getBoundingClientRect();
-    let relX = e.pageX - boundingRect.left;
-    let relY = e.pageY - boundingRect.top;
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    gsap.to(".cta", 0.3, {
-      x: (relX - boundingRect.width / 2) / boundingRect.width * 50,
-      y: (relY - boundingRect.height / 2 - scrollTop) / boundingRect.height * 50,
-      ease: Power1.out,
+  ctaBox.addEventListener('pointermove', (e) => {
+    const boundingRect = ctaBox.getBoundingClientRect();
+    const ctaBR = cta.getBoundingClientRect();
+    const relX = e.pageX - boundingRect.left;
+    const relY = e.pageY - boundingRect.top;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    gsap.to(cta, 0.3, {
+      x: (relX - boundingRect.width / 2) / (boundingRect.width * 50),
+      y: (relY - boundingRect.height / 2 - scrollTop) / (boundingRect.height * 50),
+      ease: 'Power1.out',
     });
   });
 
