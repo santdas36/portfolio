@@ -726,6 +726,7 @@ a.lighter:hover {
   width: fit-content;
   position: relative;
   touch-action:none;
+  z-index: 2;
 }
 
 .cta {
@@ -733,7 +734,6 @@ a.lighter:hover {
   padding: 0.75rem 2rem 0.75rem 3.25rem;
   font-size: 1.15rem;
   border-radius: 5rem;
-  position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   display: inline-block;
@@ -741,10 +741,9 @@ a.lighter:hover {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   color: var(--teal);
-  z-index: 2;
+  position: relative;
 }
 
-.cta.cta-active,
 .cta:hover {
   color: var(--teal);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -842,9 +841,12 @@ a.lighter:hover {
   }
 
   .cta {
-    left: 50%;
     padding: 0.75rem 3rem;
     text-align: center;
+  }
+
+  .cta-box {
+    left: 50%;
     transform: translate(-50%);
   }
 }
