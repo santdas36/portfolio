@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const relY = e.pageY - boundingRect.top;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     gsap.to(cta, 0.3, {
-      x: (relX - boundingRect.width / 2) / (boundingRect.width * 50),
-      y: (relY - boundingRect.height / 2 - scrollTop) / (boundingRect.height * 50),
+      x: (relX - boundingRect.width / 2),
+      y: (relY - boundingRect.height / 2 - scrollTop),
       ease: 'power1.out',
     });
   });
