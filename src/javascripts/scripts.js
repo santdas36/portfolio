@@ -9,7 +9,6 @@ import {
 import {
   faGithub, faInstagram, faDribbble, faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
-import MagnetMouse from './magnetMouse';
 import successIcon from '../images/success.svg';
 import loadingIcon from '../images/loading.svg';
 
@@ -258,15 +257,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const mm = new MagnetMouse({
-    magnet: {
-      element: '.magnet',
-      class: 'cta-active',
-      position: 'center',
-      distance: 20,
-    },
+  const cta = document.querySelector("a.cta");
+  const ctaBox = document.querySelector(".cta-box");
+  ctaBox.addEventListener("pointerenter", (e) => {
+    gsap.to(cta, 0.3, { x: 0, y: 0 });
   });
-  mm.init();
+  ctaBox.addEventListener("pointerleave", (e) => {
+    gsap.to(cta, 0.3, { x: 0, y: 0 });
+  });
+  ctaBox.addEventListener("pointermove", (e) => {
+    let boundingRect = ctaBox.getBoundingClientRect();
+    let ctaBR = cta.getBoundingClientRect();
+    let relX = e.pageX - boundingRect.left;
+    let relY = e.pageY - boundingRect.top;
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    gsap.to(".cta", 0.3, {
+      x: (relX - boundingRect.width / 2) / boundingRect.width * 50,
+      y: (relY - boundingRect.height / 2 - scrollTop) / boundingRect.height * 50,
+      ease: Power1.out,
+    });
+  });
 
   const contactForm = document.querySelector('.contact-form');
   const inputElems = document.querySelectorAll('.inputElem');
