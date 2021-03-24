@@ -267,7 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   ctaBox.addEventListener('pointermove', (e) => {
     const boundingRect = ctaBox.getBoundingClientRect();
-    const ctaBR = cta.getBoundingClientRect();
     const relX = e.pageX - boundingRect.left;
     const relY = e.pageY - boundingRect.top;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
