@@ -472,7 +472,7 @@ span.highlight svg {
 .hero-form .email:focus {
   outline: none;
   box-shadow: inset 0 0 0 1.5px var(--teal),
-    0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
+  0 0.25rem 0.55rem rgba(45, 147, 173, 0.2);
 }
 
 .email::placeholder {
@@ -882,7 +882,7 @@ a.lighter:hover {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.5s cubic-bezier(0.96, 0.06, 0.09, 0.98),
-      opacity 0.1s 0.5s;
+    opacity 0.1s 0.5s;
   }
 
   .navbar.open {
@@ -913,7 +913,7 @@ a.lighter:hover {
     z-index: 99;
     background: var(--teal);
     box-shadow: inset 0 2.5rem 1rem -1.5rem rgba(0, 0, 0, 0.2),
-      0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition-timing-function: cubic-bezier(0.05, 0.18, 0.14, 0.98);
   }
 
@@ -1060,7 +1060,7 @@ a.lighter:hover {
 #about {
   background: var(--white);
   box-shadow: 0 -1rem 2rem -1.5rem rgba(0, 0, 0, 0.15),
-    0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.15);
+  0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.15);
 }
 
 .about-who {
@@ -1293,6 +1293,7 @@ a.lighter:hover {
   display: flex;
   align-items: center;
   color: var(--teal);
+  cursor: pointer;
 }
 
 .work-option label svg {
@@ -1369,7 +1370,7 @@ a.lighter:hover {
   border: none;
   border: 0.25rem solid var(--black);
   box-shadow: 0 0.75rem 0 0 var(--black), 0 -0.75rem 0 0 var(--black),
-    0 1rem 1.5rem -0.5rem rgba(84, 78, 97, 0.5);
+  0 1rem 1.5rem -0.5rem rgba(84, 78, 97, 0.5);
 }
 
 .project:nth-of-type(2n + 1) .project-images .small {
@@ -1570,7 +1571,7 @@ a.lighter:hover {
   .project-images .small {
     border: 0.15rem solid var(--black);
     box-shadow: 0 0.3rem 0 0 var(--black), 0 -0.3rem 0 0 var(--black),
-      0 1rem 1.5rem -0.5rem rgba(84, 78, 97, 0.5);
+    0 1rem 1.5rem -0.5rem rgba(84, 78, 97, 0.5);
     right: 15% !important;
     left: auto !important;
   }
@@ -1645,7 +1646,7 @@ a.lighter:hover {
 #contact {
   background: var(--white);
   box-shadow: 0 -1rem 2rem -1.5rem rgba(0, 0, 0, 0.15),
-    0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.15);
+  0 1rem 2rem -1.5rem rgba(0, 0, 0, 0.15);
 }
 
 @keyframes cElem {
